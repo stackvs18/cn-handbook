@@ -1,0 +1,652 @@
+[
+  {
+    "number": 1,
+    "question": "Which task is **not** done by the data link layer?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "framing"
+      },
+      {
+        "letter": "b",
+        "text": "error control"
+      },
+      {
+        "letter": "c",
+        "text": "flow control"
+      },
+      {
+        "letter": "d",
+        "text": "channel coding"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Channel coding is physical layer.",
+    "source": "PB Q117",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "When 2 or more bits in a data unit have changed during transmission, the error is called",
+    "options": [
+      {
+        "letter": "a",
+        "text": "random error"
+      },
+      {
+        "letter": "b",
+        "text": "burst error"
+      },
+      {
+        "letter": "c",
+        "text": "inverted error"
+      },
+      {
+        "letter": "d",
+        "text": "double error"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Burst error**.",
+    "source": "PB Q118",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "Which is **not** a valid MAC address?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "3A:12:34:B2:11:41"
+      },
+      {
+        "letter": "b",
+        "text": "3A:12:3E:B2:11:41"
+      },
+      {
+        "letter": "c",
+        "text": "3A:12:34:B2:11:4F"
+      },
+      {
+        "letter": "d",
+        "text": "3A:12:34:B2:1G:41"
+      }
+    ],
+    "answer": "d",
+    "explanation": "MAC addresses are hex (0–9, A–F). **G** is not hex. Same question in the T2 paper.",
+    "source": "PB Q119",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "Which MAC address is the broadcast MAC address?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "AA:BB:CC:12:14:15"
+      },
+      {
+        "letter": "b",
+        "text": "12:23:34:45:56:67"
+      },
+      {
+        "letter": "c",
+        "text": "AA:BB:CC:DD:EE:FF"
+      },
+      {
+        "letter": "d",
+        "text": "FF:FF:FF:FF:FF:FF"
+      }
+    ],
+    "answer": "d",
+    "explanation": "All 1s = **FF:FF:FF:FF:FF:FF**.",
+    "source": "PB Q120",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "Which method is used for error detection as well as correction?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "LRC"
+      },
+      {
+        "letter": "b",
+        "text": "VRC"
+      },
+      {
+        "letter": "c",
+        "text": "Hamming code"
+      },
+      {
+        "letter": "d",
+        "text": "CRC"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Hamming code** finds and fixes 1-bit errors.",
+    "source": "PB Q121",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "In CRC, the key (divisor) is known by",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Sender"
+      },
+      {
+        "letter": "b",
+        "text": "Receiver"
+      },
+      {
+        "letter": "c",
+        "text": "Both"
+      },
+      {
+        "letter": "d",
+        "text": "None"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Both** must use the same generator.",
+    "source": "PB Q122",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "What is the receiver's window size in Go-Back-N ARQ?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "2"
+      },
+      {
+        "letter": "b",
+        "text": "1"
+      },
+      {
+        "letter": "c",
+        "text": "N"
+      },
+      {
+        "letter": "d",
+        "text": "None"
+      }
+    ],
+    "answer": "b",
+    "explanation": "GBN receiver accepts only in order: window **1**.",
+    "source": "PB Q123",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "Encoding data 1101 into a 7-bit even-parity Hamming code gives",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1010101"
+      },
+      {
+        "letter": "b",
+        "text": "1111111"
+      },
+      {
+        "letter": "c",
+        "text": "1000000"
+      },
+      {
+        "letter": "d",
+        "text": "1100110"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Book key: **1010101**.",
+    "source": "PB Q124",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "In bit stuffing, when is a 0 stuffed?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "After 4 ones"
+      },
+      {
+        "letter": "b",
+        "text": "After 5 ones"
+      },
+      {
+        "letter": "c",
+        "text": "After 3 ones"
+      },
+      {
+        "letter": "d",
+        "text": "After 6 ones"
+      }
+    ],
+    "answer": "b",
+    "explanation": "After **five 1s** (so the flag 01111110 never appears in data).",
+    "source": "PB Q125",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "Which framing method is more efficient?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Byte stuffing"
+      },
+      {
+        "letter": "b",
+        "text": "Bit stuffing"
+      },
+      {
+        "letter": "c",
+        "text": "Both"
+      },
+      {
+        "letter": "d",
+        "text": "None"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Bit stuffing** adds less overhead.",
+    "source": "PB Q126",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 11,
+    "question": "In ______ error correction, the receiver asks the sender to send the data again.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "ARQ (Automatic Repeat Request)"
+      },
+      {
+        "letter": "b",
+        "text": "FEC (Forward Error Correction)"
+      },
+      {
+        "letter": "c",
+        "text": "Revert"
+      },
+      {
+        "letter": "d",
+        "text": "None"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**ARQ** = ask again.",
+    "source": "PB Q127",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 12,
+    "question": "The divisor in a cyclic code is normally called the",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Degree"
+      },
+      {
+        "letter": "b",
+        "text": "Generator"
+      },
+      {
+        "letter": "c",
+        "text": "Redundancy"
+      },
+      {
+        "letter": "d",
+        "text": "None"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Generator** (polynomial).",
+    "source": "PB Q128",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 13,
+    "question": "What is the minimum Hamming distance between any two correct codewords (Hamming code)?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1"
+      },
+      {
+        "letter": "b",
+        "text": "2"
+      },
+      {
+        "letter": "c",
+        "text": "3"
+      },
+      {
+        "letter": "d",
+        "text": "4"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**3** → detect 2 errors, correct 1.",
+    "source": "PB Q129",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 14,
+    "question": "Adding r redundant bits to k data bits gives n-bit blocks called",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Datawords"
+      },
+      {
+        "letter": "b",
+        "text": "Blockwords"
+      },
+      {
+        "letter": "c",
+        "text": "Codewords"
+      },
+      {
+        "letter": "d",
+        "text": "None"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Codewords**.",
+    "source": "PB Q130",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 15,
+    "question": "What is the message length k of a Hamming code with r parity bits?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "2ʳ − 1"
+      },
+      {
+        "letter": "b",
+        "text": "2ʳ − r + 1"
+      },
+      {
+        "letter": "c",
+        "text": "2ʳ − r − 1"
+      },
+      {
+        "letter": "d",
+        "text": "2ʳ⁺¹ − r"
+      }
+    ],
+    "answer": "c",
+    "explanation": "n = 2ʳ − 1, so k = n − r = **2ʳ − r − 1** (r = 3 → 4).",
+    "source": "PB Q131",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 16,
+    "question": "The ______ of errors is more difficult than the ______.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "correction; detection"
+      },
+      {
+        "letter": "b",
+        "text": "detection; correction"
+      },
+      {
+        "letter": "c",
+        "text": "creation; correction"
+      },
+      {
+        "letter": "d",
+        "text": "creation; detection"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Fixing is harder than finding.",
+    "source": "PB Q132",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 17,
+    "question": "Data 1001000111110000 in 4-bit segments. What is the checksum (wrap the carry)?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "0101"
+      },
+      {
+        "letter": "b",
+        "text": "0000"
+      },
+      {
+        "letter": "c",
+        "text": "0011"
+      },
+      {
+        "letter": "d",
+        "text": "0100"
+      }
+    ],
+    "answer": "a",
+    "explanation": "1001 + 0001 + 1111 + 0000 = 25 = `11001`. Wrap the carry: 1001 + 1 = 1010. Complement → **0101**.",
+    "source": "PB Q133",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 18,
+    "question": "To send 17 data bits with Hamming code, how many parity bits are needed?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "5"
+      },
+      {
+        "letter": "b",
+        "text": "4"
+      },
+      {
+        "letter": "c",
+        "text": "3"
+      },
+      {
+        "letter": "d",
+        "text": "2"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Need 2ʳ ≥ m + r + 1: r = 5 → 32 ≥ 23 ✓ (r = 4 → 16 < 22).",
+    "source": "PB Q134",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 19,
+    "question": "The main advantage of CRC over VRC and LRC is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "higher error detection capability"
+      },
+      {
+        "letter": "b",
+        "text": "ability to detect and correct errors"
+      },
+      {
+        "letter": "c",
+        "text": "simplicity"
+      },
+      {
+        "letter": "d",
+        "text": "lower computational overhead"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Better detection** (catches burst errors).",
+    "source": "PB Q135",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 20,
+    "question": "Stop-and-wait is the same as sliding window with a window size of",
+    "options": [
+      {
+        "letter": "a",
+        "text": "0"
+      },
+      {
+        "letter": "b",
+        "text": "1"
+      },
+      {
+        "letter": "c",
+        "text": "2"
+      },
+      {
+        "letter": "d",
+        "text": "N"
+      }
+    ],
+    "answer": "b",
+    "explanation": "One frame at a time: **1**.",
+    "source": "PB Q136",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 21,
+    "question": "Convert the polynomial x⁵ + x + 1 into binary.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "100011"
+      },
+      {
+        "letter": "b",
+        "text": "110001"
+      },
+      {
+        "letter": "c",
+        "text": "100111"
+      },
+      {
+        "letter": "d",
+        "text": "101011"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Powers 5, 1, 0 → `1 0 0 0 1 1`.",
+    "source": "PB Q140",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 22,
+    "question": "In the CRC method, the generator polynomial is x⁵ + x³ + x² + 1. What is its binary form?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "110101"
+      },
+      {
+        "letter": "b",
+        "text": "101101"
+      },
+      {
+        "letter": "c",
+        "text": "101011"
+      },
+      {
+        "letter": "d",
+        "text": "111101"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Powers 5, 3, 2, 0 → positions 5 4 3 2 1 0 = `1 0 1 1 0 1` → **101101**. (If none of the 8 options in the paper match, pick NONE.)",
+    "source": "Paper T2 Q1",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 23,
+    "question": "In stop-and-wait, the propagation delay is 3.7 ms. What is the RTT?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "3.7 ms"
+      },
+      {
+        "letter": "b",
+        "text": "7.4 ms"
+      },
+      {
+        "letter": "c",
+        "text": "1.85 ms"
+      },
+      {
+        "letter": "d",
+        "text": "11.1 ms"
+      }
+    ],
+    "answer": "b",
+    "explanation": "RTT = 2 × 3.7 = **7.4 ms**.",
+    "source": "PB Q148",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 24,
+    "question": "Convert the polynomial x⁵ + 2x + 1 into binary.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "100001"
+      },
+      {
+        "letter": "b",
+        "text": "101011"
+      },
+      {
+        "letter": "c",
+        "text": "100011"
+      },
+      {
+        "letter": "d",
+        "text": "None of the above"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Coefficients must be 0 or 1. A \"2x\" is not valid → **None**.",
+    "source": "PB Q193",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 25,
+    "question": "A frame contains ESC, Flag, ESC. After byte stuffing it becomes",
+    "options": [
+      {
+        "letter": "a",
+        "text": "ESC,ESC,ESC,ESC,ESC,ESC"
+      },
+      {
+        "letter": "b",
+        "text": "ESC,ESC,ESC,Flag,ESC,ESC"
+      },
+      {
+        "letter": "c",
+        "text": "ESC,Flag,ESC,ESC,ESC,ESC"
+      },
+      {
+        "letter": "d",
+        "text": "ESC,ESC,Flag,ESC,ESC,ESC"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Put an ESC before every ESC or Flag in the data: (ESC ESC) (ESC Flag) (ESC ESC).",
+    "source": "PB Q194",
+    "bookKeyCorrected": false
+  }
+]

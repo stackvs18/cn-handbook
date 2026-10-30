@@ -1,0 +1,444 @@
+[
+  {
+    "number": 1,
+    "question": "UDP packets have a fixed-size header of ______ bytes.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "16"
+      },
+      {
+        "letter": "b",
+        "text": "8"
+      },
+      {
+        "letter": "c",
+        "text": "40"
+      },
+      {
+        "letter": "d",
+        "text": "32"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Four 2-byte fields (source port, dest port, length, checksum) = **8 bytes**. Same question in the T2 paper.",
+    "source": "PB Q336",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "The source port number in the UDP header defines",
+    "options": [
+      {
+        "letter": "a",
+        "text": "The sender computer"
+      },
+      {
+        "letter": "b",
+        "text": "The receiver computer"
+      },
+      {
+        "letter": "c",
+        "text": "The process running on the sending computer"
+      },
+      {
+        "letter": "d",
+        "text": "The process running on the receiving computer"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Ports name **processes**. Source port = the sending process.",
+    "source": "PB Q337",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "In UDP, the user datagrams are not",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Channeled"
+      },
+      {
+        "letter": "b",
+        "text": "Transformed"
+      },
+      {
+        "letter": "c",
+        "text": "Numbered"
+      },
+      {
+        "letter": "d",
+        "text": "Addressed"
+      }
+    ],
+    "answer": "c",
+    "explanation": "UDP has no sequence numbers, so datagrams are **not numbered**.",
+    "source": "PB Q339",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "Beyond IP, UDP provides additional services such as",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Routing and switching"
+      },
+      {
+        "letter": "b",
+        "text": "Sending and receiving of packets"
+      },
+      {
+        "letter": "c",
+        "text": "Multiplexing and demultiplexing"
+      },
+      {
+        "letter": "d",
+        "text": "Demultiplexing and error checking"
+      }
+    ],
+    "answer": "d",
+    "explanation": "UDP adds only **port numbers (demultiplexing)** and a **checksum (error checking)**. The key is D.",
+    "source": "PB Q340",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "The \"Total length\" field in the UDP header is the length of",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Only UDP header"
+      },
+      {
+        "letter": "b",
+        "text": "Only data"
+      },
+      {
+        "letter": "c",
+        "text": "Only checksum"
+      },
+      {
+        "letter": "d",
+        "text": "UDP header plus data"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Total length = **8-byte header + data**.",
+    "source": "PB Q341",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "UDP is a ______ protocol.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Transport layer, connectionless"
+      },
+      {
+        "letter": "b",
+        "text": "Session layer, connectionless"
+      },
+      {
+        "letter": "c",
+        "text": "Transport layer, connection-oriented"
+      },
+      {
+        "letter": "d",
+        "text": "Session layer, connection-oriented"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Transport layer, connectionless.",
+    "source": "PB Q347",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "UDP header dump `CB84002C 001C0AEC`. What is the destination port number?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "43"
+      },
+      {
+        "letter": "b",
+        "text": "32"
+      },
+      {
+        "letter": "c",
+        "text": "42"
+      },
+      {
+        "letter": "d",
+        "text": "44"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Second block `002C` = 2 × 16 + 12 = **44**.",
+    "source": "PB Q355",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "UDP header dump `DB84002C001E0A1C`. What is the length of the data?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "19"
+      },
+      {
+        "letter": "b",
+        "text": "18"
+      },
+      {
+        "letter": "c",
+        "text": "22"
+      },
+      {
+        "letter": "d",
+        "text": "20"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Third block `001E` = 30 = total length. Data = 30 − 8 = **22**.",
+    "source": "PB Q356",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "UDP dump `AA84000D001A001A`. What is the source port?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "43652"
+      },
+      {
+        "letter": "b",
+        "text": "43648"
+      },
+      {
+        "letter": "c",
+        "text": "43520"
+      },
+      {
+        "letter": "d",
+        "text": "44164"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`AA84` = 10×4096 + 10×256 + 8×16 + 4 = 40960 + 2560 + 128 + 4 = **43652**.",
+    "source": "PB Q371",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "UDP dump `AA84000D001A001A`. What is the length of the data?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "26"
+      },
+      {
+        "letter": "b",
+        "text": "18"
+      },
+      {
+        "letter": "c",
+        "text": "13"
+      },
+      {
+        "letter": "d",
+        "text": "10"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Total length `001A` = 26. Data = 26 − 8 = **18**.",
+    "source": "PB Q371",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 11,
+    "question": "UDP dump `ABAB000D001C001C`. What is the source port?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "43947"
+      },
+      {
+        "letter": "b",
+        "text": "43691"
+      },
+      {
+        "letter": "c",
+        "text": "44011"
+      },
+      {
+        "letter": "d",
+        "text": "43819"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`ABAB` = 10×4096 + 11×256 + 10×16 + 11 = 40960 + 2816 + 160 + 11 = **43947**.",
+    "source": "PB Q372",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 12,
+    "question": "UDP dump `CCDD000D001C001C`. What is the source port?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "52445"
+      },
+      {
+        "letter": "b",
+        "text": "52429"
+      },
+      {
+        "letter": "c",
+        "text": "52189"
+      },
+      {
+        "letter": "d",
+        "text": "52479"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`CCDD` = 12×4096 + 12×256 + 13×16 + 13 = 49152 + 3072 + 208 + 13 = **52445**.",
+    "source": "PB Q373",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 13,
+    "question": "UDP dump `CB84000D001C001C`. What is the source port?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "52100"
+      },
+      {
+        "letter": "b",
+        "text": "51972"
+      },
+      {
+        "letter": "c",
+        "text": "52036"
+      },
+      {
+        "letter": "d",
+        "text": "52356"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`CB84` = 12×4096 + 11×256 + 8×16 + 4 = 49152 + 2816 + 128 + 4 = **52100**.",
+    "source": "PB Q374",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 14,
+    "question": "UDP dump `1F90005000200020` (from the T2 paper). Source port, destination port, total length, data length?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "8080, 80, 32, 24"
+      },
+      {
+        "letter": "b",
+        "text": "8080, 80, 32, 32"
+      },
+      {
+        "letter": "c",
+        "text": "8090, 50, 20, 12"
+      },
+      {
+        "letter": "d",
+        "text": "1F90, 50, 20, 12"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`1F90` = 1×4096 + 15×256 + 9×16 + 0 = **8080**. `0050` = **80**. `0020` = **32**. Data 32 − 8 = **24**.",
+    "source": "Paper T2 Q4.6",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 15,
+    "question": "UDP dump `0421 000B 002A E217` (class notes). What are the source port and data length?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1057, 34"
+      },
+      {
+        "letter": "b",
+        "text": "1057, 42"
+      },
+      {
+        "letter": "c",
+        "text": "421, 34"
+      },
+      {
+        "letter": "d",
+        "text": "1056, 34"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`0421` = 4×256 + 2×16 + 1 = **1057**. Total `002A` = 42. Data = 42 − 8 = **34**.",
+    "source": "Class notes",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 16,
+    "question": "The transport layer protocols used for real-time multimedia and file transfer are",
+    "options": [
+      {
+        "letter": "a",
+        "text": "UDP, UDP"
+      },
+      {
+        "letter": "b",
+        "text": "TCP, TCP"
+      },
+      {
+        "letter": "c",
+        "text": "UDP, TCP"
+      },
+      {
+        "letter": "d",
+        "text": "TCP, UDP"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Multimedia wants speed over reliability → UDP. File transfer needs every byte → TCP.",
+    "source": "PB Q350",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 17,
+    "question": "The transport layer protocols used for DNS and email respectively are",
+    "options": [
+      {
+        "letter": "a",
+        "text": "UDP, UDP"
+      },
+      {
+        "letter": "b",
+        "text": "TCP, TCP"
+      },
+      {
+        "letter": "c",
+        "text": "UDP, TCP"
+      },
+      {
+        "letter": "d",
+        "text": "TCP, UDP"
+      }
+    ],
+    "answer": "c",
+    "explanation": "DNS → **UDP** (port 53). Email (SMTP) → **TCP** (port 25).",
+    "source": "PB Q351",
+    "bookKeyCorrected": false
+  }
+]

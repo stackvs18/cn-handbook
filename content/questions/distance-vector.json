@@ -1,0 +1,184 @@
+[
+  {
+    "number": 1,
+    "question": "In distance vector routing, router X updates its cost to Y using",
+    "options": [
+      {
+        "letter": "a",
+        "text": "D(X,Y) = min over neighbours V of [cost(X,V) + D(V,Y)]"
+      },
+      {
+        "letter": "b",
+        "text": "D(X,Y) = max over neighbours of their costs"
+      },
+      {
+        "letter": "c",
+        "text": "Dijkstra on the full map"
+      },
+      {
+        "letter": "d",
+        "text": "the hop count only"
+      }
+    ],
+    "answer": "a",
+    "explanation": "This is the **Bellman–Ford** equation. You take each neighbour's advertised distance, add the link cost to that neighbour, and keep the minimum.",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "In distance vector routing, each router sends its table to",
+    "options": [
+      {
+        "letter": "a",
+        "text": "every router in the network"
+      },
+      {
+        "letter": "b",
+        "text": "only its directly connected neighbours"
+      },
+      {
+        "letter": "c",
+        "text": "only the source"
+      },
+      {
+        "letter": "d",
+        "text": "a central server"
+      }
+    ],
+    "answer": "b",
+    "explanation": "DV = tell your **neighbours** about the **whole network** (its table).",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "Class DV graph: N1–N2 1, N2–N3 6, N2–N5 3, N3–N4 2, N4–N5 4. After the tables settle, what is N1's distance to N4?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "7"
+      },
+      {
+        "letter": "b",
+        "text": "8"
+      },
+      {
+        "letter": "c",
+        "text": "10"
+      },
+      {
+        "letter": "d",
+        "text": "∞"
+      }
+    ],
+    "answer": "b",
+    "explanation": "N1 → N2 (1) → N5 (3) → N4 (4) = **8**. N1 → N2 → N3 → N4 = 1 + 6 + 2 = 9 is worse. The class notes reach 8 in step 3.",
+    "source": "Class notes",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "Same graph. What is N3's distance to N1 once it is stable?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "6"
+      },
+      {
+        "letter": "b",
+        "text": "7"
+      },
+      {
+        "letter": "c",
+        "text": "8"
+      },
+      {
+        "letter": "d",
+        "text": "9"
+      }
+    ],
+    "answer": "b",
+    "explanation": "N3 → N2 (6) → N1 (1) = **7**, next hop N2.",
+    "source": "Class notes",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "Q282 graph (u–v 1, u–y 2, v–x 3, v–z 6, x–y 3, x–z 2). Final distance from u to z?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "6"
+      },
+      {
+        "letter": "b",
+        "text": "7"
+      },
+      {
+        "letter": "c",
+        "text": "8"
+      },
+      {
+        "letter": "d",
+        "text": "5"
+      }
+    ],
+    "answer": "a",
+    "explanation": "u→v (1) → x (3) → z (2) = **6**. The direct u–v–z route = 7.",
+    "source": "PB Q282",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "Paper graph (A–B 2, B–C 3, A–D 5, B–E 4, D–E 1, E–F 2). Distance from A to F?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "7"
+      },
+      {
+        "letter": "b",
+        "text": "8"
+      },
+      {
+        "letter": "c",
+        "text": "9"
+      },
+      {
+        "letter": "d",
+        "text": "10"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A→B→E = 6 (or A→D→E = 6), then E→F 2 → **8**.",
+    "source": "Paper T2 Q4.2",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "Which protocol uses distance vector routing?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "OSPF"
+      },
+      {
+        "letter": "b",
+        "text": "RIP"
+      },
+      {
+        "letter": "c",
+        "text": "BGP"
+      },
+      {
+        "letter": "d",
+        "text": "IS-IS"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**RIP** (Routing Information Protocol) = distance vector, Bellman–Ford.",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  }
+]

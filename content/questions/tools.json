@@ -1,0 +1,340 @@
+[
+  {
+    "number": 1,
+    "question": "To find the number of routers between a source and destination, the utility to use is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "route"
+      },
+      {
+        "letter": "b",
+        "text": "Ipconfig"
+      },
+      {
+        "letter": "c",
+        "text": "Ifconfig"
+      },
+      {
+        "letter": "d",
+        "text": "Traceroute"
+      }
+    ],
+    "answer": "d",
+    "explanation": "**Traceroute** (`tracert` on Windows) lists every hop. Same question in the T2 paper.",
+    "source": "PB Q410",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "______ command is used to manipulate the TCP/IP routing table.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "route"
+      },
+      {
+        "letter": "b",
+        "text": "Ipconfig"
+      },
+      {
+        "letter": "c",
+        "text": "Ifconfig"
+      },
+      {
+        "letter": "d",
+        "text": "Traceroute"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`route`.",
+    "source": "PB Q411",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "Ping sweep is a part of",
+    "options": [
+      {
+        "letter": "a",
+        "text": "route"
+      },
+      {
+        "letter": "b",
+        "text": "N-map"
+      },
+      {
+        "letter": "c",
+        "text": "Ifconfig"
+      },
+      {
+        "letter": "d",
+        "text": "Traceroute"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Nmap** pings a whole range to find live hosts. Same question in the T2 paper.",
+    "source": "PB Q412",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "Wireshark is a ______ tool.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "network protocol analysis"
+      },
+      {
+        "letter": "b",
+        "text": "network connection security"
+      },
+      {
+        "letter": "c",
+        "text": "connection analysis"
+      },
+      {
+        "letter": "d",
+        "text": "defending malicious packet-filtering"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Wireshark captures packets and **analyses protocols**.",
+    "source": "PB Q413",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "Wireshark filter to filter by IP",
+    "options": [
+      {
+        "letter": "a",
+        "text": "ip.addr == 10.10.50.1"
+      },
+      {
+        "letter": "b",
+        "text": "ip.dest == 10.10.50.1"
+      },
+      {
+        "letter": "c",
+        "text": "ip.src == 10.10.50.1"
+      },
+      {
+        "letter": "d",
+        "text": "None of mentioned"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`ip.addr` matches the address as source **or** destination.",
+    "source": "PB Q414",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "Wireshark filter to filter by destination IP",
+    "options": [
+      {
+        "letter": "a",
+        "text": "ip.addr == 10.10.50.1"
+      },
+      {
+        "letter": "b",
+        "text": "ip.dest == 10.10.50.1"
+      },
+      {
+        "letter": "c",
+        "text": "ip.src == 10.10.50.1"
+      },
+      {
+        "letter": "d",
+        "text": "None of mentioned"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The practice book's answer is `ip.dest`. (Real Wireshark spells it `ip.dst`. In the paper, pick whichever destination option appears.)",
+    "source": "PB Q415",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "Wireshark filter to filter by source IP",
+    "options": [
+      {
+        "letter": "a",
+        "text": "ip.addr == 10.10.50.1"
+      },
+      {
+        "letter": "b",
+        "text": "ip.dest == 10.10.50.1"
+      },
+      {
+        "letter": "c",
+        "text": "ip.src == 10.10.50.1"
+      },
+      {
+        "letter": "d",
+        "text": "None of mentioned"
+      }
+    ],
+    "answer": "c",
+    "explanation": "`ip.src`.",
+    "source": "PB Q416",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "Wireshark filter to filter by port",
+    "options": [
+      {
+        "letter": "a",
+        "text": "tcp.port == 25"
+      },
+      {
+        "letter": "b",
+        "text": "tcp.port.port == 25"
+      },
+      {
+        "letter": "c",
+        "text": "tcp.dstport == 25"
+      },
+      {
+        "letter": "d",
+        "text": "None of mentioned"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`tcp.port` matches source or destination port.",
+    "source": "PB Q417",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "Wireshark filter to filter by URL",
+    "options": [
+      {
+        "letter": "a",
+        "text": "tcp.port == 25"
+      },
+      {
+        "letter": "b",
+        "text": "http.host == \"host name\""
+      },
+      {
+        "letter": "c",
+        "text": "tcp.dstport.port == 25"
+      },
+      {
+        "letter": "d",
+        "text": "None of mentioned"
+      }
+    ],
+    "answer": "b",
+    "explanation": "`http.host == \"hostname\"`. Same question in the T2 paper.",
+    "source": "PB Q418",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "Wireshark filter to filter by destination port",
+    "options": [
+      {
+        "letter": "a",
+        "text": "tcp.port == 25"
+      },
+      {
+        "letter": "b",
+        "text": "tcp.port.port == 25"
+      },
+      {
+        "letter": "c",
+        "text": "tcp.dstport == 25"
+      },
+      {
+        "letter": "d",
+        "text": "None of mentioned"
+      }
+    ],
+    "answer": "c",
+    "explanation": "`tcp.dstport`.",
+    "source": "PB Q419",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 11,
+    "question": "Filter for packets from or to the IP address 8.8.8.8",
+    "options": [
+      {
+        "letter": "a",
+        "text": "ip.addr==8.8.8.8"
+      },
+      {
+        "letter": "b",
+        "text": "ipaddress=8.8.8.8"
+      },
+      {
+        "letter": "c",
+        "text": "ip address=8.8.8.8"
+      },
+      {
+        "letter": "d",
+        "text": "ip ,,addr==8.8.8.8"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`ip.addr==8.8.8.8`.",
+    "source": "PB Q420",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 12,
+    "question": "Which command shows your PC's IP address, mask and gateway on Windows?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "ipconfig"
+      },
+      {
+        "letter": "b",
+        "text": "ifconfig"
+      },
+      {
+        "letter": "c",
+        "text": "route"
+      },
+      {
+        "letter": "d",
+        "text": "nslookup"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`ipconfig` (Windows), `ifconfig` / `ip a` (Linux).",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 13,
+    "question": "Which command asks DNS for the IP address of a name?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "ping"
+      },
+      {
+        "letter": "b",
+        "text": "netstat"
+      },
+      {
+        "letter": "c",
+        "text": "nslookup"
+      },
+      {
+        "letter": "d",
+        "text": "arp"
+      }
+    ],
+    "answer": "c",
+    "explanation": "`nslookup google.com`.",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  }
+]

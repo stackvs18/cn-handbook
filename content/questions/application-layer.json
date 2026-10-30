@@ -1,0 +1,522 @@
+[
+  {
+    "number": 1,
+    "question": "The address used at the application layer is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "URL"
+      },
+      {
+        "letter": "b",
+        "text": "port address"
+      },
+      {
+        "letter": "c",
+        "text": "MAC address"
+      },
+      {
+        "letter": "d",
+        "text": "IP address"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Application = **URL** (names). Transport = port. Network = IP. Data link = MAC.",
+    "source": "PB Q379",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "The packet of information at the application layer is called",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Packet"
+      },
+      {
+        "letter": "b",
+        "text": "Message"
+      },
+      {
+        "letter": "c",
+        "text": "Segment"
+      },
+      {
+        "letter": "d",
+        "text": "Frame"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Application = **message**, transport = segment, network = packet, data link = frame.",
+    "source": "PB Q380",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "Which one of the following is an architecture paradigm?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Peer to peer"
+      },
+      {
+        "letter": "b",
+        "text": "Client-server"
+      },
+      {
+        "letter": "c",
+        "text": "HTTP"
+      },
+      {
+        "letter": "d",
+        "text": "Both Peer-to-Peer & Client-Server"
+      }
+    ],
+    "answer": "d",
+    "explanation": "The two application architectures are **client–server** and **P2P**. Same question in the T2 paper.",
+    "source": "PB Q381",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "An application developer has permission to decide the following on the transport layer side",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Transport layer protocol"
+      },
+      {
+        "letter": "b",
+        "text": "Maximum buffer size"
+      },
+      {
+        "letter": "c",
+        "text": "Both transport layer protocol and maximum buffer size"
+      },
+      {
+        "letter": "d",
+        "text": "None of the mentioned"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The developer picks TCP or UDP **and** a few parameters such as buffer sizes.",
+    "source": "PB Q382",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "The application layer offers ______ service.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "End to end"
+      },
+      {
+        "letter": "b",
+        "text": "Process to process"
+      },
+      {
+        "letter": "c",
+        "text": "Both end to end and process to process"
+      },
+      {
+        "letter": "d",
+        "text": "None of the mentioned"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The book's key is **end to end**.",
+    "source": "PB Q383",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "E-mail is a(n)",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Loss-tolerant application"
+      },
+      {
+        "letter": "b",
+        "text": "Bandwidth-sensitive application"
+      },
+      {
+        "letter": "c",
+        "text": "Elastic application"
+      },
+      {
+        "letter": "d",
+        "text": "None of the mentioned"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Email works at whatever speed is available → **elastic**. It is **not** loss-tolerant.",
+    "source": "PB Q384",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "Which is a time-sensitive service?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "File transfer"
+      },
+      {
+        "letter": "b",
+        "text": "File download"
+      },
+      {
+        "letter": "c",
+        "text": "E-mail"
+      },
+      {
+        "letter": "d",
+        "text": "Internet telephony"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Voice calls break with delay.",
+    "source": "PB Q385",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "Electronic mail uses which application layer protocol?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "SMTP"
+      },
+      {
+        "letter": "b",
+        "text": "HTTP"
+      },
+      {
+        "letter": "c",
+        "text": "FTP"
+      },
+      {
+        "letter": "d",
+        "text": "SIP"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**SMTP** sends mail (port 25).",
+    "source": "PB Q386",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "The ______ translates internet domain and host names to IP addresses.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "domain name system"
+      },
+      {
+        "letter": "b",
+        "text": "routing information protocol"
+      },
+      {
+        "letter": "c",
+        "text": "network time protocol"
+      },
+      {
+        "letter": "d",
+        "text": "internet relay chat"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**DNS**.",
+    "source": "PB Q387",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "Which allows a user at one site to connect to another site and pass keystrokes from the local host to the remote host?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "HTTP"
+      },
+      {
+        "letter": "b",
+        "text": "FTP"
+      },
+      {
+        "letter": "c",
+        "text": "Telnet"
+      },
+      {
+        "letter": "d",
+        "text": "TCP"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Telnet** = remote login (port 23).",
+    "source": "PB Q388",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 11,
+    "question": "In which pair can both protocols use multiple TCP connections between the same client and server?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "HTTP, FTP"
+      },
+      {
+        "letter": "b",
+        "text": "HTTP, TELNET"
+      },
+      {
+        "letter": "c",
+        "text": "FTP, SMTP"
+      },
+      {
+        "letter": "d",
+        "text": "HTTP, SMTP"
+      }
+    ],
+    "answer": "a",
+    "explanation": "FTP uses two connections (control 21 + data 20). HTTP can open parallel connections.",
+    "source": "PB Q389",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 12,
+    "question": "Which protocol is used for transferring electronic mail messages from one machine to another?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "TELNET"
+      },
+      {
+        "letter": "b",
+        "text": "FTP"
+      },
+      {
+        "letter": "c",
+        "text": "SNMP"
+      },
+      {
+        "letter": "d",
+        "text": "SMTP"
+      }
+    ],
+    "answer": "d",
+    "explanation": "**SMTP**.",
+    "source": "PB Q390",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 13,
+    "question": "A web server sends a program to the client, which runs it at the client to create a web document. Such documents are called",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Active"
+      },
+      {
+        "letter": "b",
+        "text": "Static"
+      },
+      {
+        "letter": "c",
+        "text": "Dynamic"
+      },
+      {
+        "letter": "d",
+        "text": "Passive"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Runs at the **client** → **active** document (e.g. JavaScript). Created at the server → dynamic. Fixed file → static.",
+    "source": "PB Q391",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 14,
+    "question": "Pick the odd one out.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "File transfer"
+      },
+      {
+        "letter": "b",
+        "text": "File download"
+      },
+      {
+        "letter": "c",
+        "text": "E-mail"
+      },
+      {
+        "letter": "d",
+        "text": "Interactive games"
+      }
+    ],
+    "answer": "d",
+    "explanation": "The first three are elastic. **Interactive games** are time-sensitive.",
+    "source": "PB Q392",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 15,
+    "question": "An application layer protocol defines",
+    "options": [
+      {
+        "letter": "a",
+        "text": "types of messages exchanged"
+      },
+      {
+        "letter": "b",
+        "text": "message format, syntax and semantics"
+      },
+      {
+        "letter": "c",
+        "text": "rules for when and how processes send and respond"
+      },
+      {
+        "letter": "d",
+        "text": "all of the mentioned"
+      }
+    ],
+    "answer": "d",
+    "explanation": "All three.",
+    "source": "PB Q394",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 16,
+    "question": "Which is **not** an application layer protocol?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "HTTP"
+      },
+      {
+        "letter": "b",
+        "text": "SMTP"
+      },
+      {
+        "letter": "c",
+        "text": "UDP"
+      },
+      {
+        "letter": "d",
+        "text": "HTTPS"
+      }
+    ],
+    "answer": "c",
+    "explanation": "UDP is a transport protocol.",
+    "source": "PB Q395",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 17,
+    "question": "Which is **not** an application layer protocol?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "HTTP"
+      },
+      {
+        "letter": "b",
+        "text": "SMTP"
+      },
+      {
+        "letter": "c",
+        "text": "FTP"
+      },
+      {
+        "letter": "d",
+        "text": "TCP"
+      }
+    ],
+    "answer": "d",
+    "explanation": "TCP is a transport protocol.",
+    "source": "PB Q396",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 18,
+    "question": "A DNS resolver caches a record with TTL 3,600 s. After 900 s, without a refresh, what is the remaining TTL?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "900 s"
+      },
+      {
+        "letter": "b",
+        "text": "1,800 s"
+      },
+      {
+        "letter": "c",
+        "text": "2,700 s"
+      },
+      {
+        "letter": "d",
+        "text": "3,600 s"
+      }
+    ],
+    "answer": "c",
+    "explanation": "TTL counts down: 3600 − 900 = **2700 s**. At 0 the cached record is thrown away.",
+    "source": "Paper T2 Q2",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 19,
+    "question": "Which port numbers do HTTP, FTP (control), FTP (data), SMTP and DNS use?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "80, 21, 20, 25, 53"
+      },
+      {
+        "letter": "b",
+        "text": "80, 20, 21, 25, 53"
+      },
+      {
+        "letter": "c",
+        "text": "8080, 21, 20, 110, 53"
+      },
+      {
+        "letter": "d",
+        "text": "443, 21, 20, 25, 67"
+      }
+    ],
+    "answer": "a",
+    "explanation": "HTTP **80**, FTP control **21**, FTP data **20**, SMTP **25**, DNS **53**.",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 20,
+    "question": "Non-persistent vs persistent HTTP: which is true?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Non-persistent keeps the TCP connection open"
+      },
+      {
+        "letter": "b",
+        "text": "Persistent (HTTP/1.1) keeps the TCP connection open for more requests"
+      },
+      {
+        "letter": "c",
+        "text": "Both close after every object"
+      },
+      {
+        "letter": "d",
+        "text": "Persistent uses UDP"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Non-persistent (HTTP/1.0) closes after each response. **Persistent** (HTTP/1.1, default) leaves the connection open.",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  }
+]

@@ -1,0 +1,496 @@
+[
+  {
+    "number": 1,
+    "question": "The main difference between TCP and UDP is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "UDP is a datagram whereas TCP is a connection-oriented service"
+      },
+      {
+        "letter": "b",
+        "text": "UDP is connection-oriented whereas TCP is a datagram service"
+      },
+      {
+        "letter": "c",
+        "text": "TCP is an Internet protocol whereas UDP is an ATM protocol"
+      },
+      {
+        "letter": "d",
+        "text": "TCP and UDP both are connectionless"
+      }
+    ],
+    "answer": "a",
+    "explanation": "TCP = connection-oriented and reliable. UDP = connectionless datagrams.",
+    "source": "PB Q326",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "End-to-end connectivity is provided from host to host in the",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Session layer"
+      },
+      {
+        "letter": "b",
+        "text": "Network layer"
+      },
+      {
+        "letter": "c",
+        "text": "Data link layer"
+      },
+      {
+        "letter": "d",
+        "text": "Transport layer"
+      }
+    ],
+    "answer": "d",
+    "explanation": "The book's key is the **transport layer**.",
+    "source": "PB Q327",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "A security-based connection is provided by which layer?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Transport layer"
+      },
+      {
+        "letter": "b",
+        "text": "Application layer"
+      },
+      {
+        "letter": "c",
+        "text": "Network layer"
+      },
+      {
+        "letter": "d",
+        "text": "Session layer"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Key: **transport layer** (SSL/TLS sits on it).",
+    "source": "PB Q328",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "In the transport layer, a message is divided into transmittable",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Segments"
+      },
+      {
+        "letter": "b",
+        "text": "Packets"
+      },
+      {
+        "letter": "c",
+        "text": "Frames"
+      },
+      {
+        "letter": "d",
+        "text": "Data"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Transport data unit = **segment**.",
+    "source": "PB Q329",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "Which of the following statements is **incorrect**?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "The data link layer handles the transfer of data between the ends of a physical link"
+      },
+      {
+        "letter": "b",
+        "text": "The presentation layer transforms information from machine format to an understandable format"
+      },
+      {
+        "letter": "c",
+        "text": "The transport layer provides any format translation or code conversion needed to put data into an intelligible format"
+      },
+      {
+        "letter": "d",
+        "text": "All of the above"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Format translation and code conversion are the **presentation** layer's job, not transport's.",
+    "source": "PB Q330",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "In TCP, an ACK segment carrying no data consumes ______ sequence number(s).",
+    "options": [
+      {
+        "letter": "a",
+        "text": "no"
+      },
+      {
+        "letter": "b",
+        "text": "one"
+      },
+      {
+        "letter": "c",
+        "text": "two"
+      },
+      {
+        "letter": "d",
+        "text": "three"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A pure ACK uses **no** sequence numbers.",
+    "source": "PB Q331",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "TCP and UDP are called",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Application protocols"
+      },
+      {
+        "letter": "b",
+        "text": "Session protocols"
+      },
+      {
+        "letter": "c",
+        "text": "Transport protocols"
+      },
+      {
+        "letter": "d",
+        "text": "Network protocols"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Both are **transport** protocols.",
+    "source": "PB Q332",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "In TCP, a SYN segment consumes ______ sequence number(s).",
+    "options": [
+      {
+        "letter": "a",
+        "text": "no"
+      },
+      {
+        "letter": "b",
+        "text": "one"
+      },
+      {
+        "letter": "c",
+        "text": "two"
+      },
+      {
+        "letter": "d",
+        "text": "three"
+      }
+    ],
+    "answer": "b",
+    "explanation": "SYN and FIN each consume **one** sequence number even though they carry no data.",
+    "source": "PB Q333",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "A client that wishes to connect to an open server tells its TCP that it needs to be connected to that server. The process is called",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Active open"
+      },
+      {
+        "letter": "b",
+        "text": "Active close"
+      },
+      {
+        "letter": "c",
+        "text": "Passive close"
+      },
+      {
+        "letter": "d",
+        "text": "Passive open"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The server does a **passive open** (waits). The client does an **active open** (sends SYN).",
+    "source": "PB Q334",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "Transmission Control Protocol (TCP) needs buffers for",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Storage"
+      },
+      {
+        "letter": "b",
+        "text": "Request"
+      },
+      {
+        "letter": "c",
+        "text": "Connections"
+      },
+      {
+        "letter": "d",
+        "text": "Transmission"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Sending and receiving buffers **store** bytes until they are sent/ACKed or read.",
+    "source": "PB Q335",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 11,
+    "question": "TCP, a connection-oriented transport protocol, establishes a",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Virtual Communication"
+      },
+      {
+        "letter": "b",
+        "text": "Virtual Path"
+      },
+      {
+        "letter": "c",
+        "text": "Virtual Flow"
+      },
+      {
+        "letter": "d",
+        "text": "Virtual Flow Communication"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Key: **virtual path** between the two ends.",
+    "source": "PB Q338",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 12,
+    "question": "A TCP connection transfers a 1000-byte file. The first byte is numbered 10001. What is the sequence number of the segment if all data is sent in one segment?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "10000"
+      },
+      {
+        "letter": "b",
+        "text": "10001"
+      },
+      {
+        "letter": "c",
+        "text": "12001"
+      },
+      {
+        "letter": "d",
+        "text": "11001"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A segment's sequence number = the number of its **first byte** = **10001**.",
+    "source": "PB Q342",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 13,
+    "question": "Connection establishment in TCP is done by which mechanism?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Flow control"
+      },
+      {
+        "letter": "b",
+        "text": "Three-Way Handshaking"
+      },
+      {
+        "letter": "c",
+        "text": "Forwarding"
+      },
+      {
+        "letter": "d",
+        "text": "Synchronization"
+      }
+    ],
+    "answer": "b",
+    "explanation": "SYN → SYN + ACK → ACK.",
+    "source": "PB Q343",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 14,
+    "question": "What allows TCP to detect lost segments and recover from that loss?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Sequence number"
+      },
+      {
+        "letter": "b",
+        "text": "Acknowledgment number"
+      },
+      {
+        "letter": "c",
+        "text": "Checksum"
+      },
+      {
+        "letter": "d",
+        "text": "Both Sequence & Acknowledgment number"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Sequence numbers show gaps. ACK numbers tell the sender what has arrived. Both are needed.",
+    "source": "PB Q344",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 15,
+    "question": "A port number is an \"ephemeral port number\" if the source host is the",
+    "options": [
+      {
+        "letter": "a",
+        "text": "NTP"
+      },
+      {
+        "letter": "b",
+        "text": "Echo"
+      },
+      {
+        "letter": "c",
+        "text": "Server"
+      },
+      {
+        "letter": "d",
+        "text": "Client"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Clients pick short-lived (**ephemeral**) ports. Servers use well-known ports.",
+    "source": "PB Q346",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 16,
+    "question": "A long-lived TCP session has end-to-end bandwidth 1 Gbps and starts with sequence number 1234. The minimum time before this sequence number can be used again is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "30–32 s"
+      },
+      {
+        "letter": "b",
+        "text": "34–35 s"
+      },
+      {
+        "letter": "c",
+        "text": "20–23 s"
+      },
+      {
+        "letter": "d",
+        "text": "40–45 s"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Sequence space = 2³² bytes. 2³² × 8 / 10⁹ = **34.36 s**.",
+    "source": "PB Q349",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 17,
+    "question": "OSI statements: (1) Application layer establishes, manages and terminates connections between cooperating applications. (2) Data link layer provides reliable transfer across the physical link. (3) Transport layer provides end-to-end error recovery and flow control. Which are correct?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1 and 2 only"
+      },
+      {
+        "letter": "b",
+        "text": "1 and 3 only"
+      },
+      {
+        "letter": "c",
+        "text": "1, 2 and 3 only"
+      },
+      {
+        "letter": "d",
+        "text": "2 and 3 only"
+      }
+    ],
+    "answer": "d",
+    "explanation": "(1) describes the **session** layer, so it is wrong. (2) and (3) are right.",
+    "source": "PB Q348",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 18,
+    "question": "TCP header dump `E293 0017 00000001 00000000 5002 07FF`. What type of segment is it?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "ACK"
+      },
+      {
+        "letter": "b",
+        "text": "SYN"
+      },
+      {
+        "letter": "c",
+        "text": "FIN"
+      },
+      {
+        "letter": "d",
+        "text": "RST"
+      }
+    ],
+    "answer": "b",
+    "explanation": "`5002`: HLEN 5 (20 bytes). The last 6 bits are `000010` → only the **SYN** flag is set. (Flag order: URG ACK PSH RST SYN FIN.)",
+    "source": "Class notes",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 19,
+    "question": "Same TCP dump `E293 0017 00000001 00000000 5002 07FF`. What is the window size?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "2047"
+      },
+      {
+        "letter": "b",
+        "text": "2048"
+      },
+      {
+        "letter": "c",
+        "text": "4095"
+      },
+      {
+        "letter": "d",
+        "text": "20482"
+      }
+    ],
+    "answer": "a",
+    "explanation": "`07FF` = 7×256 + 15×16 + 15 = **2047**.",
+    "source": "Class notes",
+    "bookKeyCorrected": false
+  }
+]

@@ -1,0 +1,262 @@
+[
+  {
+    "number": 1,
+    "question": "The network layer is concerned with ______ of data.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "bits"
+      },
+      {
+        "letter": "b",
+        "text": "frames"
+      },
+      {
+        "letter": "c",
+        "text": "packets"
+      },
+      {
+        "letter": "d",
+        "text": "bytes"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Each layer has its own data unit: physical = **bits**, data link = **frames**, network = **packets** (datagrams), transport = **segments**.",
+    "source": "PB Q214",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "Which one of the following is **not** a function of the network layer?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "routing"
+      },
+      {
+        "letter": "b",
+        "text": "inter-networking"
+      },
+      {
+        "letter": "c",
+        "text": "congestion control"
+      },
+      {
+        "letter": "d",
+        "text": "error control"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Routing, connecting networks together and congestion control are network-layer jobs. **Error control** is done by the data link and transport layers.",
+    "source": "PB Q215",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "IP is a ______ protocol.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "unreliable"
+      },
+      {
+        "letter": "b",
+        "text": "connection-oriented"
+      },
+      {
+        "letter": "c",
+        "text": "file transfer"
+      },
+      {
+        "letter": "d",
+        "text": "secure communication"
+      }
+    ],
+    "answer": "a",
+    "explanation": "IP is **best effort**: it does not guarantee delivery, order or no duplicates. That is why it is called unreliable and connectionless.",
+    "source": "PB Q217",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "A telephone network is an example of a ______ network.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Packet switched"
+      },
+      {
+        "letter": "b",
+        "text": "Circuit switched"
+      },
+      {
+        "letter": "c",
+        "text": "both of the mentioned"
+      },
+      {
+        "letter": "d",
+        "text": "Message switching"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A phone call reserves a dedicated path for the whole call, which is **circuit switching**.",
+    "source": "PB Q218",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "Which of the following assertions is **FALSE** about the Internet Protocol (IP)?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "It is possible for a computer to have multiple IP addresses"
+      },
+      {
+        "letter": "b",
+        "text": "IP packets from the same source to the same destination can take different routes in the network"
+      },
+      {
+        "letter": "c",
+        "text": "IP ensures that a packet is discarded if it is unable to reach its destination within a given number of hops"
+      },
+      {
+        "letter": "d",
+        "text": "The packet source cannot set the route of an outgoing packet; the route is determined only by the routing tables in the routers on the way"
+      }
+    ],
+    "answer": "d",
+    "explanation": "A source **can** set the route using the *source routing* option in the IPv4 header, so (d) is false. The other three are true (multiple NICs, datagram routing, TTL).",
+    "source": "PB Q219",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "Computer networks that provide only a connection service at the network layer are called ______, while those that provide only a connectionless service are called ______.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Broadcast, Multicast"
+      },
+      {
+        "letter": "b",
+        "text": "Peer-to-peer, Client-server"
+      },
+      {
+        "letter": "c",
+        "text": "Virtual-circuit networks, Datagram networks"
+      },
+      {
+        "letter": "d",
+        "text": "None of the above"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Connection service at the network layer = **virtual-circuit network**. Connectionless = **datagram network**. (The book prints option C as \"Connection-oriented, Connectionless\".)",
+    "source": "PB Q220",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "In a virtual circuit network each packet contains",
+    "options": [
+      {
+        "letter": "a",
+        "text": "full source and destination address"
+      },
+      {
+        "letter": "b",
+        "text": "a short VC number"
+      },
+      {
+        "letter": "c",
+        "text": "both (a) and (b)"
+      },
+      {
+        "letter": "d",
+        "text": "none of the mentioned"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The path is set up once, so every packet only carries a small **VC number** (virtual circuit identifier). Datagram networks carry full addresses instead.",
+    "source": "PB Q229",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "Suppose users share a 3 Mbps link and each user needs 150 kbps while transmitting. With **circuit switching**, how many users can be supported?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "10"
+      },
+      {
+        "letter": "b",
+        "text": "15"
+      },
+      {
+        "letter": "c",
+        "text": "20"
+      },
+      {
+        "letter": "d",
+        "text": "30"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Circuit switching reserves 150 kbps per user all the time: 3000 / 150 = **20 users**.",
+    "source": "Paper T2 Q2",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "Same link (3 Mbps, 150 kbps per user), but each user transmits only 10% of the time. With packet switching, what is the probability that a given user is transmitting?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "0.01"
+      },
+      {
+        "letter": "b",
+        "text": "0.1"
+      },
+      {
+        "letter": "c",
+        "text": "0.5"
+      },
+      {
+        "letter": "d",
+        "text": "0.9"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The user is active 10% of the time, so p = **0.1**.",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "A token bucket adds one token every 5 μs; each token is one ATM cell carrying 48 bytes of data. What is the maximum sustainable data rate?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "9.6 Mbps"
+      },
+      {
+        "letter": "b",
+        "text": "38.4 Mbps"
+      },
+      {
+        "letter": "c",
+        "text": "76.8 Mbps"
+      },
+      {
+        "letter": "d",
+        "text": "240 Mbps"
+      }
+    ],
+    "answer": "c",
+    "explanation": "48 × 8 = 384 bits every 5 μs → 384 / (5 × 10⁻⁶) = **76.8 Mbps**.",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  }
+]

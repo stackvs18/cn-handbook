@@ -1,0 +1,808 @@
+[
+  {
+    "number": 1,
+    "question": "The first network was called",
+    "options": [
+      {
+        "letter": "a",
+        "text": "CNNET"
+      },
+      {
+        "letter": "b",
+        "text": "NSFNET"
+      },
+      {
+        "letter": "c",
+        "text": "ASAPNET"
+      },
+      {
+        "letter": "d",
+        "text": "ARPANET"
+      }
+    ],
+    "answer": "d",
+    "explanation": "**ARPANET** (1969), by the US Advanced Research Projects Agency.",
+    "source": "PB Q1",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "Three or more devices share a link in a ______ connection.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Unipoint"
+      },
+      {
+        "letter": "b",
+        "text": "Multipoint"
+      },
+      {
+        "letter": "c",
+        "text": "Point to point"
+      },
+      {
+        "letter": "d",
+        "text": "Simplex"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Multipoint** = shared link. Point-to-point = a dedicated link between two devices.",
+    "source": "PB Q2",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "Two devices are in a network if",
+    "options": [
+      {
+        "letter": "a",
+        "text": "a process in one device can exchange information with a process in another device"
+      },
+      {
+        "letter": "b",
+        "text": "a process is running on both devices"
+      },
+      {
+        "letter": "c",
+        "text": "the PIDs of the processes on different devices are the same"
+      },
+      {
+        "letter": "d",
+        "text": "a process is active and another is inactive"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A network means processes on different devices **can exchange information**.",
+    "source": "PB Q3",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "______ can determine the category of a network.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Size"
+      },
+      {
+        "letter": "b",
+        "text": "Ownership"
+      },
+      {
+        "letter": "c",
+        "text": "The Physical Architecture"
+      },
+      {
+        "letter": "d",
+        "text": "All of the above"
+      }
+    ],
+    "answer": "d",
+    "explanation": "LAN/MAN/WAN by size, private/public by ownership, and so on: **all**.",
+    "source": "PB Q4",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "In computer networks, LAN stands for ______ Area Network.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Local"
+      },
+      {
+        "letter": "b",
+        "text": "Live"
+      },
+      {
+        "letter": "c",
+        "text": "Long"
+      },
+      {
+        "letter": "d",
+        "text": "Length"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Local** Area Network.",
+    "source": "PB Q5",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "On the receiver side, the lower layer is responsible for",
+    "options": [
+      {
+        "letter": "a",
+        "text": "picking up the letter, removing it from the envelope and reading it"
+      },
+      {
+        "letter": "b",
+        "text": "delivering the letter from the carrier to the post office"
+      },
+      {
+        "letter": "c",
+        "text": "carrying the letter from the post office to the mailbox"
+      },
+      {
+        "letter": "d",
+        "text": "None of the above"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Book key **B**. In the post-office analogy, the lowest layer at the receiver takes the letter off the carrier.",
+    "source": "PB Q6",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "Which layer is not present in TCP/IP?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Application layer"
+      },
+      {
+        "letter": "b",
+        "text": "Internet layer"
+      },
+      {
+        "letter": "c",
+        "text": "Transport layer"
+      },
+      {
+        "letter": "d",
+        "text": "Presentation layer"
+      }
+    ],
+    "answer": "d",
+    "explanation": "TCP/IP has no separate **presentation** or session layer.",
+    "source": "PB Q7",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "In computer networks, MAN stands for ______ Area Network.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Master"
+      },
+      {
+        "letter": "b",
+        "text": "Maximum"
+      },
+      {
+        "letter": "c",
+        "text": "Metropolitan"
+      },
+      {
+        "letter": "d",
+        "text": "Mini"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Metropolitan** (city-sized).",
+    "source": "PB Q8",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "Which of the following are network services?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "File service"
+      },
+      {
+        "letter": "b",
+        "text": "Print service"
+      },
+      {
+        "letter": "c",
+        "text": "Database service"
+      },
+      {
+        "letter": "d",
+        "text": "All of the above"
+      }
+    ],
+    "answer": "d",
+    "explanation": "All of them.",
+    "source": "PB Q9",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "TCP/IP has how many layers?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "5"
+      },
+      {
+        "letter": "b",
+        "text": "4"
+      },
+      {
+        "letter": "c",
+        "text": "6"
+      },
+      {
+        "letter": "d",
+        "text": "7"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Book key: **4** (Application, Transport, Internet, Network access). OSI has 7.",
+    "source": "PB Q10",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 11,
+    "question": "The ______ layer changes bits into electromagnetic signals.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Physical"
+      },
+      {
+        "letter": "b",
+        "text": "Transport"
+      },
+      {
+        "letter": "c",
+        "text": "Data Link"
+      },
+      {
+        "letter": "d",
+        "text": "Presentation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The **physical** layer turns bits into signals.",
+    "source": "PB Q11",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 12,
+    "question": "A device that is used to connect a number of LANs is a",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Router"
+      },
+      {
+        "letter": "b",
+        "text": "Repeater"
+      },
+      {
+        "letter": "c",
+        "text": "Bridge"
+      },
+      {
+        "letter": "d",
+        "text": "All of the above"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Key: **router**.",
+    "source": "PB Q12",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 13,
+    "question": "A group of connected computers is a network, and the concept of connected computers sharing resources is called",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Networking"
+      },
+      {
+        "letter": "b",
+        "text": "Inter-Network"
+      },
+      {
+        "letter": "c",
+        "text": "Inter-Connection"
+      },
+      {
+        "letter": "d",
+        "text": "Computer Group"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Networking**.",
+    "source": "PB Q13",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 14,
+    "question": "What is the main function of the transport layer?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Node to node delivery"
+      },
+      {
+        "letter": "b",
+        "text": "End to end delivery"
+      },
+      {
+        "letter": "c",
+        "text": "Synchronization"
+      },
+      {
+        "letter": "d",
+        "text": "All of the above"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**End to end** (process to process) delivery.",
+    "source": "PB Q14",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 15,
+    "question": "Which networking hardware can operate at any of the seven OSI layers?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Router"
+      },
+      {
+        "letter": "b",
+        "text": "Gateway"
+      },
+      {
+        "letter": "c",
+        "text": "Switch"
+      },
+      {
+        "letter": "d",
+        "text": "Modem"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A **gateway** can translate at any layer.",
+    "source": "PB Q15",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 16,
+    "question": "Which of the following represents latency?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "propagation + transmission + queuing + processing delay"
+      },
+      {
+        "letter": "b",
+        "text": "propagation − transmission + queuing + processing"
+      },
+      {
+        "letter": "c",
+        "text": "propagation + transmission + queuing − processing"
+      },
+      {
+        "letter": "d",
+        "text": "propagation + transmission − queuing − processing"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Latency = **propagation + transmission + queuing + processing**, all added. Same question in the T2 paper.",
+    "source": "PB Q16",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 17,
+    "question": "The time each device holds a message before processing it is called",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Propagation time"
+      },
+      {
+        "letter": "b",
+        "text": "Queuing time"
+      },
+      {
+        "letter": "c",
+        "text": "Transmission time"
+      },
+      {
+        "letter": "d",
+        "text": "Jitter"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Waiting in the queue = **queuing time**.",
+    "source": "PB Q17",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 18,
+    "question": "Which device can help extend the range of a wireless router?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Wireless repeater"
+      },
+      {
+        "letter": "b",
+        "text": "Wireless adapter"
+      },
+      {
+        "letter": "c",
+        "text": "WiMAX"
+      },
+      {
+        "letter": "d",
+        "text": "Network interface card"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A **repeater** re-sends the signal further.",
+    "source": "PB Q18",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 19,
+    "question": "What does ARPANET stand for?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Automated Research Projects Agency Network"
+      },
+      {
+        "letter": "b",
+        "text": "Advanced Research Projects Agency Network"
+      },
+      {
+        "letter": "c",
+        "text": "American Research Projects Agency Network"
+      },
+      {
+        "letter": "d",
+        "text": "American Research Projects Automated Network"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Advanced** Research Projects Agency Network.",
+    "source": "PB Q19",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 20,
+    "question": "A set of rules is called a",
+    "options": [
+      {
+        "letter": "a",
+        "text": "SMTP"
+      },
+      {
+        "letter": "b",
+        "text": "FTP"
+      },
+      {
+        "letter": "c",
+        "text": "IMAP"
+      },
+      {
+        "letter": "d",
+        "text": "Protocol"
+      }
+    ],
+    "answer": "d",
+    "explanation": "**Protocol**.",
+    "source": "PB Q20",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 21,
+    "question": "How many versions of IP are in use?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1"
+      },
+      {
+        "letter": "b",
+        "text": "2"
+      },
+      {
+        "letter": "c",
+        "text": "4"
+      },
+      {
+        "letter": "d",
+        "text": "6"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**2**: IPv4 and IPv6.",
+    "source": "PB Q21",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 22,
+    "question": "Which layer is in the OSI model but not in TCP/IP?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Network layer"
+      },
+      {
+        "letter": "b",
+        "text": "Session layer"
+      },
+      {
+        "letter": "c",
+        "text": "Application layer"
+      },
+      {
+        "letter": "d",
+        "text": "Transport layer"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Session** (and presentation).",
+    "source": "PB Q22",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 23,
+    "question": "What is the length of an IPv4 address?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "4 bits"
+      },
+      {
+        "letter": "b",
+        "text": "6 bits"
+      },
+      {
+        "letter": "c",
+        "text": "32 bits"
+      },
+      {
+        "letter": "d",
+        "text": "16 bits"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**32 bits** = 4 bytes.",
+    "source": "PB Q23",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 24,
+    "question": "Which device boosts a weak signal?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Modem"
+      },
+      {
+        "letter": "b",
+        "text": "Repeater"
+      },
+      {
+        "letter": "c",
+        "text": "Switch"
+      },
+      {
+        "letter": "d",
+        "text": "Router"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Repeater** regenerates the signal.",
+    "source": "PB Q24",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 25,
+    "question": "What is the length of an IPv6 address?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "16 bytes"
+      },
+      {
+        "letter": "b",
+        "text": "12 bytes"
+      },
+      {
+        "letter": "c",
+        "text": "18 bytes"
+      },
+      {
+        "letter": "d",
+        "text": "10 bytes"
+      }
+    ],
+    "answer": "a",
+    "explanation": "128 bits = **16 bytes**.",
+    "source": "PB Q25",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 26,
+    "question": "A MAC address is ______ long and stored in the ______.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "48 bits, NIC"
+      },
+      {
+        "letter": "b",
+        "text": "48 bits, Windows"
+      },
+      {
+        "letter": "c",
+        "text": "48 bytes, Linux"
+      },
+      {
+        "letter": "d",
+        "text": "48 bytes, NIC"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**48 bits**, burned into the **NIC**.",
+    "source": "PB Q26",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 27,
+    "question": "What is the transmission time for a 2.5 KB message if the bandwidth is 1 Gbps?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "0.02 ms"
+      },
+      {
+        "letter": "b",
+        "text": "0.2 ms"
+      },
+      {
+        "letter": "c",
+        "text": "2 ms"
+      },
+      {
+        "letter": "d",
+        "text": "20 ms"
+      }
+    ],
+    "answer": "a",
+    "explanation": "2.5 × 1000 × 8 = 20,000 bits. 20,000 / 10⁹ = 20 μs = **0.02 ms**. Same question in the T2 paper.",
+    "source": "PB Q28",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 28,
+    "question": "Propagation time over 12,000 km at 2.4 × 10⁸ m/s?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "5 ms"
+      },
+      {
+        "letter": "b",
+        "text": "50 ms"
+      },
+      {
+        "letter": "c",
+        "text": "500 ms"
+      },
+      {
+        "letter": "d",
+        "text": "0.5 ms"
+      }
+    ],
+    "answer": "b",
+    "explanation": "12 × 10⁶ / 2.4 × 10⁸ = 0.05 s = **50 ms**.",
+    "source": "PB Q27",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 29,
+    "question": "1,000-byte packet, 2,500 km link, 2.5 × 10⁸ m/s, 2 Mbps. Time to *propagate*?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "4 ms"
+      },
+      {
+        "letter": "b",
+        "text": "10 ms"
+      },
+      {
+        "letter": "c",
+        "text": "14 ms"
+      },
+      {
+        "letter": "d",
+        "text": "1 ms"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Propagation = 2.5 × 10⁶ / 2.5 × 10⁸ = **10 ms**. (The book's answer of 14 ms adds the 4 ms transmission time: 8000 / 2 × 10⁶.)",
+    "source": "PB Q29",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 30,
+    "question": "Which represents the fastest data transmission speed?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Gbps"
+      },
+      {
+        "letter": "b",
+        "text": "Kbps"
+      },
+      {
+        "letter": "c",
+        "text": "Bps"
+      },
+      {
+        "letter": "d",
+        "text": "Bandwidth"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Giga > Kilo.",
+    "source": "PB Q67",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 31,
+    "question": "A ______ is a set of rules that governs data communication.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "forum"
+      },
+      {
+        "letter": "b",
+        "text": "Standards"
+      },
+      {
+        "letter": "c",
+        "text": "Protocol"
+      },
+      {
+        "letter": "d",
+        "text": "None of the above"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Protocol**.",
+    "source": "PB Q70",
+    "bookKeyCorrected": false
+  }
+]

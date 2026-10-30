@@ -1,0 +1,834 @@
+[
+  {
+    "number": 1,
+    "question": "Why must a station wait a random time before re-sending after a collision in pure ALOHA?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "To prevent other stations"
+      },
+      {
+        "letter": "b",
+        "text": "To avoid more collisions"
+      },
+      {
+        "letter": "c",
+        "text": "To detect other collisions"
+      },
+      {
+        "letter": "d",
+        "text": "To get acknowledgment from the receiver"
+      }
+    ],
+    "answer": "b",
+    "explanation": "If both waited the same time they would collide again.",
+    "source": "PB Q163",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "Which strategy does pure ALOHA use to prevent congestion from endless retransmissions?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Abort after 5 attempts"
+      },
+      {
+        "letter": "b",
+        "text": "Allow only 2 retransmissions"
+      },
+      {
+        "letter": "c",
+        "text": "Restriction on the number of retransmission attempts"
+      },
+      {
+        "letter": "d",
+        "text": "No restriction"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A **limit** on attempts (Kmax).",
+    "source": "PB Q164",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "The vulnerable time of pure ALOHA for fixed-length frames (T = frame time) is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "2 × T"
+      },
+      {
+        "letter": "b",
+        "text": "3 × T"
+      },
+      {
+        "letter": "c",
+        "text": "T/2"
+      },
+      {
+        "letter": "d",
+        "text": "5 × T"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Pure ALOHA **2T**. Slotted ALOHA T.",
+    "source": "PB Q165",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "Pure ALOHA throughput is maximum when G =",
+    "options": [
+      {
+        "letter": "a",
+        "text": "0.5"
+      },
+      {
+        "letter": "b",
+        "text": "1"
+      },
+      {
+        "letter": "c",
+        "text": "2"
+      },
+      {
+        "letter": "d",
+        "text": "none of above"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Pure: **G = 0.5**. Slotted: G = 1.",
+    "source": "PB Q166",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "Consider an 800 kbps link. What is the maximum useful bandwidth with pure ALOHA?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "294.4 kbps"
+      },
+      {
+        "letter": "b",
+        "text": "147.2 kbps"
+      },
+      {
+        "letter": "c",
+        "text": "194.4 kbps"
+      },
+      {
+        "letter": "d",
+        "text": "247.2 kbps"
+      }
+    ],
+    "answer": "b",
+    "explanation": "0.184 × 800 = **147.2 kbps**. Same question in the T2 paper.",
+    "source": "PB Q167",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "The throughput formula for pure ALOHA is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "S = G·e⁻ᴳ"
+      },
+      {
+        "letter": "b",
+        "text": "S = 2G·e⁻ᴳ"
+      },
+      {
+        "letter": "c",
+        "text": "S = G·e⁻²ᴳ"
+      },
+      {
+        "letter": "d",
+        "text": "none of above"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Pure: **S = G e⁻²ᴳ**.",
+    "source": "PB Q168",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "Maximum throughput of pure ALOHA is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "G·e⁻ᴳ"
+      },
+      {
+        "letter": "b",
+        "text": "0.368"
+      },
+      {
+        "letter": "c",
+        "text": "G·e⁻²ᴳ"
+      },
+      {
+        "letter": "d",
+        "text": "0.184"
+      }
+    ],
+    "answer": "d",
+    "explanation": "**18.4%**.",
+    "source": "PB Q169",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "Slotted ALOHA throughput is maximum when G =",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1"
+      },
+      {
+        "letter": "b",
+        "text": "1.5"
+      },
+      {
+        "letter": "c",
+        "text": "0.5"
+      },
+      {
+        "letter": "d",
+        "text": "none of above"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**G = 1**.",
+    "source": "PB Q170",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "The throughput formula for slotted ALOHA is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "S = G·e⁻ᴳ"
+      },
+      {
+        "letter": "b",
+        "text": "S = 2G·e⁻ᴳ"
+      },
+      {
+        "letter": "c",
+        "text": "S = G·e⁻²ᴳ"
+      },
+      {
+        "letter": "d",
+        "text": "none of above"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Slotted: **S = G e⁻ᴳ**.",
+    "source": "PB Q171",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "Maximum throughput of slotted ALOHA is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "G·e⁻ᴳ"
+      },
+      {
+        "letter": "b",
+        "text": "0.184"
+      },
+      {
+        "letter": "c",
+        "text": "G·e⁻²ᴳ"
+      },
+      {
+        "letter": "d",
+        "text": "0.368"
+      }
+    ],
+    "answer": "d",
+    "explanation": "**36.8%**.",
+    "source": "PB Q172",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 11,
+    "question": "Consider an 800 kbps link. What is the maximum useful bandwidth with slotted ALOHA?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "194.4 kbps"
+      },
+      {
+        "letter": "b",
+        "text": "294.4 kbps"
+      },
+      {
+        "letter": "c",
+        "text": "246.2 kbps"
+      },
+      {
+        "letter": "d",
+        "text": "146.2 kbps"
+      }
+    ],
+    "answer": "b",
+    "explanation": "0.368 × 800 = **294.4 kbps**.",
+    "source": "PB Q173",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 12,
+    "question": "Radio broadcast on a common frequency uses the ______ protocol.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "CSMA"
+      },
+      {
+        "letter": "b",
+        "text": "Collision-free"
+      },
+      {
+        "letter": "c",
+        "text": "Limited-contention"
+      },
+      {
+        "letter": "d",
+        "text": "ALOHA"
+      }
+    ],
+    "answer": "d",
+    "explanation": "**ALOHA** was built for radio.",
+    "source": "PB Q174",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 13,
+    "question": "______ is a medium access control protocol used for transmitting data via a shared channel.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "ALOHA"
+      },
+      {
+        "letter": "b",
+        "text": "Framing"
+      },
+      {
+        "letter": "c",
+        "text": "TCP"
+      },
+      {
+        "letter": "d",
+        "text": "None of the above"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**ALOHA**.",
+    "source": "PB Q175",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 14,
+    "question": "What is the full form of CSMA?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Carrier Signal Multiple Access"
+      },
+      {
+        "letter": "b",
+        "text": "Collision Sense Multiple Access"
+      },
+      {
+        "letter": "c",
+        "text": "Channel Sense Multiple Access"
+      },
+      {
+        "letter": "d",
+        "text": "Carrier Sense Multiple Access"
+      }
+    ],
+    "answer": "d",
+    "explanation": "**Carrier Sense** Multiple Access.",
+    "source": "PB Q176",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 15,
+    "question": "Which is **not** a CSMA access mode?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1-persistent"
+      },
+      {
+        "letter": "b",
+        "text": "p-persistent"
+      },
+      {
+        "letter": "c",
+        "text": "A-persistent"
+      },
+      {
+        "letter": "d",
+        "text": "Non-persistent"
+      }
+    ],
+    "answer": "c",
+    "explanation": "There is no A-persistent.",
+    "source": "PB Q177",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 16,
+    "question": "CSMA/CA prevents collisions by",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Interframe Space (IFS)"
+      },
+      {
+        "letter": "b",
+        "text": "Contention window"
+      },
+      {
+        "letter": "c",
+        "text": "Acknowledgement"
+      },
+      {
+        "letter": "d",
+        "text": "all of above"
+      }
+    ],
+    "answer": "d",
+    "explanation": "All three.",
+    "source": "PB Q178",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 17,
+    "question": "What is the next step after sending a jamming signal in CSMA/CD?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Wait for a random time"
+      },
+      {
+        "letter": "b",
+        "text": "Increment k"
+      },
+      {
+        "letter": "c",
+        "text": "Wait for Tp"
+      },
+      {
+        "letter": "d",
+        "text": "all of above"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Key: **increment k** (then back off).",
+    "source": "PB Q179",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 18,
+    "question": "What is the next step after sending a frame in CSMA/CA?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Wait for timeout"
+      },
+      {
+        "letter": "b",
+        "text": "Increment k"
+      },
+      {
+        "letter": "c",
+        "text": "Wait for Tp"
+      },
+      {
+        "letter": "d",
+        "text": "all of above"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Wait for the ACK or a **timeout**.",
+    "source": "PB Q180",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 19,
+    "question": "In CSMA/CD, after the 5th collision, what is the probability that a node chooses K = 4?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "0.03125"
+      },
+      {
+        "letter": "b",
+        "text": "0.0625"
+      },
+      {
+        "letter": "c",
+        "text": "0.015625"
+      },
+      {
+        "letter": "d",
+        "text": "none of above"
+      }
+    ],
+    "answer": "a",
+    "explanation": "K is chosen from 0 to 2⁵ − 1 = 31 → 1/32 = **0.03125**.",
+    "source": "PB Q181",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 20,
+    "question": "CSMA/CD at 1 Gbps over a 1 km cable, signal speed 200,000 km/s. Minimum frame size?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1400 bytes"
+      },
+      {
+        "letter": "b",
+        "text": "1250 bytes"
+      },
+      {
+        "letter": "c",
+        "text": "1320 bytes"
+      },
+      {
+        "letter": "d",
+        "text": "1211 bytes"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Tp = 1 / 200000 s = 5 μs. Min frame = 2 × Tp × B = 10 μs × 10⁹ = 10,000 bits = **1250 bytes**.",
+    "source": "PB Q182",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 21,
+    "question": "In CSMA/CA, ______ can also be used to define the priority of a station or frame.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Contention window"
+      },
+      {
+        "letter": "b",
+        "text": "Inter Frame Space"
+      },
+      {
+        "letter": "c",
+        "text": "Backoff time"
+      },
+      {
+        "letter": "d",
+        "text": "Frame type"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**IFS**: a shorter IFS means a higher priority.",
+    "source": "PB Q183",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 22,
+    "question": "For a wireless network, ______ is not possible.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "static IP addressing"
+      },
+      {
+        "letter": "b",
+        "text": "cabling infrastructure"
+      },
+      {
+        "letter": "c",
+        "text": "collision detection"
+      },
+      {
+        "letter": "d",
+        "text": "dedicated bandwidth"
+      }
+    ],
+    "answer": "c",
+    "explanation": "That is why Wi-Fi uses CSMA/**CA**.",
+    "source": "PB Q184",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 23,
+    "question": "CSMA/CD can be used in a ______ network.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Wi-Fi"
+      },
+      {
+        "letter": "b",
+        "text": "Ethernet"
+      },
+      {
+        "letter": "c",
+        "text": "Bluetooth"
+      },
+      {
+        "letter": "d",
+        "text": "Zigbee"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Wired **Ethernet**.",
+    "source": "PB Q185",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 24,
+    "question": "What is the start frame delimiter (SFD) in an Ethernet frame?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "10101010"
+      },
+      {
+        "letter": "b",
+        "text": "10101011"
+      },
+      {
+        "letter": "c",
+        "text": "00000000"
+      },
+      {
+        "letter": "d",
+        "text": "11111111"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**10101011**.",
+    "source": "PB Q186",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 25,
+    "question": "Which IEEE standard is for Wi-Fi?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "IEEE 802.1"
+      },
+      {
+        "letter": "b",
+        "text": "IEEE 802.12"
+      },
+      {
+        "letter": "c",
+        "text": "IEEE 802.11"
+      },
+      {
+        "letter": "d",
+        "text": "IEEE 802.4"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**802.11**.",
+    "source": "PB Q187",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 26,
+    "question": "The maximum payload size in an Ethernet frame is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1000 bytes"
+      },
+      {
+        "letter": "b",
+        "text": "1200 bytes"
+      },
+      {
+        "letter": "c",
+        "text": "1300 bytes"
+      },
+      {
+        "letter": "d",
+        "text": "1500 bytes"
+      }
+    ],
+    "answer": "d",
+    "explanation": "**1500 bytes** (this is the MTU used in the fragmentation sums).",
+    "source": "PB Q188",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 27,
+    "question": "______ is a standard protocol embedded in software and hardware for building a LAN.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Ethernet"
+      },
+      {
+        "letter": "b",
+        "text": "Wi-Fi"
+      },
+      {
+        "letter": "c",
+        "text": "Bluetooth"
+      },
+      {
+        "letter": "d",
+        "text": "Sneakernet"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Ethernet**.",
+    "source": "PB Q189",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 28,
+    "question": "Which IEEE standard is for Ethernet?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "IEEE 802.1"
+      },
+      {
+        "letter": "b",
+        "text": "IEEE 802.2"
+      },
+      {
+        "letter": "c",
+        "text": "IEEE 802.3"
+      },
+      {
+        "letter": "d",
+        "text": "IEEE 802.4"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**802.3**.",
+    "source": "PB Q190",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 29,
+    "question": "IEEE 802.3 is primarily concerned with",
+    "options": [
+      {
+        "letter": "a",
+        "text": "wireless networking standards"
+      },
+      {
+        "letter": "b",
+        "text": "wired Ethernet standards"
+      },
+      {
+        "letter": "c",
+        "text": "bridging and switching"
+      },
+      {
+        "letter": "d",
+        "text": "network security"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Wired **Ethernet**.",
+    "source": "PB Q191",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 30,
+    "question": "Which of the following is an Ethernet standard?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "10BASE-T"
+      },
+      {
+        "letter": "b",
+        "text": "10BASE-P"
+      },
+      {
+        "letter": "c",
+        "text": "10BASE-Q"
+      },
+      {
+        "letter": "d",
+        "text": "10BASE-R"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**10BASE-T** (twisted pair).",
+    "source": "PB Q192",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 31,
+    "question": "In CSMA/CD, after the 6th collision, how many distinct values can the random number R take?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1"
+      },
+      {
+        "letter": "b",
+        "text": "4"
+      },
+      {
+        "letter": "c",
+        "text": "15"
+      },
+      {
+        "letter": "d",
+        "text": "64"
+      }
+    ],
+    "answer": "d",
+    "explanation": "0 to 2⁶ − 1 → **64** values.",
+    "source": "PB Q196",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 32,
+    "question": "In which OSI layer does CSMA/CD operate?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Data Link"
+      },
+      {
+        "letter": "b",
+        "text": "Physical"
+      },
+      {
+        "letter": "c",
+        "text": "Session"
+      },
+      {
+        "letter": "d",
+        "text": "Presentation"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The MAC sublayer of the **data link** layer.",
+    "source": "PB Q197",
+    "bookKeyCorrected": false
+  }
+]

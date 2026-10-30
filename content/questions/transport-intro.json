@@ -1,0 +1,652 @@
+[
+  {
+    "number": 1,
+    "question": "The transport layer aggregates data from different applications into a single stream before passing it to the",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Network Layer"
+      },
+      {
+        "letter": "b",
+        "text": "Datalink Layer"
+      },
+      {
+        "letter": "c",
+        "text": "Application Layer"
+      },
+      {
+        "letter": "d",
+        "text": "Physical Layer"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Many apps → one stream going **down** to the network layer. That is multiplexing.",
+    "source": "PB Q296",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "Transport layer protocols deal with",
+    "options": [
+      {
+        "letter": "a",
+        "text": "application to application communication"
+      },
+      {
+        "letter": "b",
+        "text": "process to process communication"
+      },
+      {
+        "letter": "c",
+        "text": "node to node communication"
+      },
+      {
+        "letter": "d",
+        "text": "man to man communication"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Network layer = host to host. Data link = node to node. **Transport = process to process** (using port numbers).",
+    "source": "PB Q297",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "A ______ is a TCP name for a transport service access point.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "port"
+      },
+      {
+        "letter": "b",
+        "text": "pipe"
+      },
+      {
+        "letter": "c",
+        "text": "node"
+      },
+      {
+        "letter": "d",
+        "text": "socket"
+      }
+    ],
+    "answer": "a",
+    "explanation": "The book's key is **port**. (A socket = IP + port.)",
+    "source": "PB Q298",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "What are the functions of the transport layer?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Multiplexing/Demultiplexing"
+      },
+      {
+        "letter": "b",
+        "text": "Connectionless and Connection-Oriented Services"
+      },
+      {
+        "letter": "c",
+        "text": "Congestion Control"
+      },
+      {
+        "letter": "d",
+        "text": "all of the mentioned"
+      }
+    ],
+    "answer": "d",
+    "explanation": "The transport layer does all three, plus flow control and error control.",
+    "source": "PB Q299",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "UDP stands for",
+    "options": [
+      {
+        "letter": "a",
+        "text": "User Datagram Protocol"
+      },
+      {
+        "letter": "b",
+        "text": "Union Data Protocol"
+      },
+      {
+        "letter": "c",
+        "text": "Unity Device Protocol"
+      },
+      {
+        "letter": "d",
+        "text": "Username Data Protocol"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**U**ser **D**atagram **P**rotocol.",
+    "source": "PB Q300",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "The port address range in the transport layer is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "0 to 61,535"
+      },
+      {
+        "letter": "b",
+        "text": "0 to 65,535"
+      },
+      {
+        "letter": "c",
+        "text": "0 to 62,535"
+      },
+      {
+        "letter": "d",
+        "text": "0 to 65,353"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Ports are 16 bits → 2¹⁶ = 65536 values → **0 to 65,535**.",
+    "source": "PB Q301",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "Statements: I. TCP connections are full duplex. II. TCP has no option for selective acknowledgment. III. TCP connections are message streams.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Only I is correct"
+      },
+      {
+        "letter": "b",
+        "text": "Only I and II are correct"
+      },
+      {
+        "letter": "c",
+        "text": "Only II and III are correct"
+      },
+      {
+        "letter": "d",
+        "text": "All of I, II and III are correct"
+      }
+    ],
+    "answer": "a",
+    "explanation": "I is true. II is false (TCP has a SACK option). III is false: TCP is a **byte stream**, not a message stream.",
+    "source": "PB Q302",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "Which of the following is **not** a field in the TCP header?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Sequence number"
+      },
+      {
+        "letter": "b",
+        "text": "Window size"
+      },
+      {
+        "letter": "c",
+        "text": "Checksum"
+      },
+      {
+        "letter": "d",
+        "text": "Fragment offset"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Fragment offset is an **IP** header field.",
+    "source": "PB Q303",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "User Datagram Protocol is called connectionless because",
+    "options": [
+      {
+        "letter": "a",
+        "text": "all UDP packets are treated independently by the transport layer"
+      },
+      {
+        "letter": "b",
+        "text": "it sends data as a stream of related packets"
+      },
+      {
+        "letter": "c",
+        "text": "it is received in the same order as sent"
+      },
+      {
+        "letter": "d",
+        "text": "it sends data very quickly"
+      }
+    ],
+    "answer": "a",
+    "explanation": "No connection setup and no state: every datagram is on its own.",
+    "source": "PB Q304",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "The transport layer is responsible for process-to-process delivery using",
+    "options": [
+      {
+        "letter": "a",
+        "text": "IP Address"
+      },
+      {
+        "letter": "b",
+        "text": "MAC Address"
+      },
+      {
+        "letter": "c",
+        "text": "Port Address"
+      },
+      {
+        "letter": "d",
+        "text": "none of the above"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IP address finds the host. **Port** finds the process on that host.",
+    "source": "PB Q305",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 11,
+    "question": "The transport layer can identify the symptoms of overloaded nodes using",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Traffic control"
+      },
+      {
+        "letter": "b",
+        "text": "Flow control"
+      },
+      {
+        "letter": "c",
+        "text": "Byte orientation"
+      },
+      {
+        "letter": "d",
+        "text": "Data Integrity"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The book's key is **flow control**.",
+    "source": "PB Q306",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 12,
+    "question": "With regard to Internet security, the full form of SSL is ______ and it provides security at ______ layer.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Simple Socket Layer, Transport Layer"
+      },
+      {
+        "letter": "b",
+        "text": "Secure Socket Layer, Application Layer"
+      },
+      {
+        "letter": "c",
+        "text": "Secure Socket Layer, Transport Layer"
+      },
+      {
+        "letter": "d",
+        "text": "Secure Socket Layer, Application"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Secure Socket Layer**, sits on top of the **transport layer** (TCP). This came in the T2 paper with 8 options.",
+    "source": "PB Q307",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 13,
+    "question": "The transport layer may be responsible for flow and error control, like the",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Physical layer"
+      },
+      {
+        "letter": "b",
+        "text": "Data link layer"
+      },
+      {
+        "letter": "c",
+        "text": "Subnet layer"
+      },
+      {
+        "letter": "d",
+        "text": "Application layer"
+      }
+    ],
+    "answer": "b",
+    "explanation": "The data link layer does flow and error control hop by hop. The transport layer does it **end to end**.",
+    "source": "PB Q308",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 14,
+    "question": "A communication device that combines transmissions from several I/O devices into one line is a",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Concentrator"
+      },
+      {
+        "letter": "b",
+        "text": "Modifier"
+      },
+      {
+        "letter": "c",
+        "text": "Multiplexer"
+      },
+      {
+        "letter": "d",
+        "text": "Full duplex file"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Many inputs, one line → **multiplexer**.",
+    "source": "PB Q309",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 15,
+    "question": "Which of the following are transport layer protocols used in networking?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "TCP and FTP"
+      },
+      {
+        "letter": "b",
+        "text": "UDP and HTTP"
+      },
+      {
+        "letter": "c",
+        "text": "TCP and UDP"
+      },
+      {
+        "letter": "d",
+        "text": "HTTP and FTP"
+      }
+    ],
+    "answer": "c",
+    "explanation": "FTP and HTTP are application layer protocols.",
+    "source": "PB Q310",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 16,
+    "question": "The sharing of a medium and its link by two or more devices is called",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Fully duplexing"
+      },
+      {
+        "letter": "b",
+        "text": "Multiplexing"
+      },
+      {
+        "letter": "c",
+        "text": "Micropleixng"
+      },
+      {
+        "letter": "d",
+        "text": "Duplexing"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Multiplexing**.",
+    "source": "PB Q311",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 17,
+    "question": "If there are n signal sources of the same data rate, the TDM link has ______ slots.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "n"
+      },
+      {
+        "letter": "b",
+        "text": "n/2"
+      },
+      {
+        "letter": "c",
+        "text": "n × 2"
+      },
+      {
+        "letter": "d",
+        "text": "2ⁿ"
+      }
+    ],
+    "answer": "a",
+    "explanation": "One slot per source per frame → **n** slots.",
+    "source": "PB Q312",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 18,
+    "question": "A link transmits 4000 frames per second and each slot has 8 bits. What is the transmission rate of a circuit using TDM?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "32 kbps"
+      },
+      {
+        "letter": "b",
+        "text": "500 bps"
+      },
+      {
+        "letter": "c",
+        "text": "500 kbps"
+      },
+      {
+        "letter": "d",
+        "text": "32 bps"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Each circuit gets one slot per frame: 4000 × 8 = **32,000 bps = 32 kbps**. Same question in the T2 paper.",
+    "source": "PB Q313",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 19,
+    "question": "______ does not provide reliable end-to-end communication.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "TCP"
+      },
+      {
+        "letter": "b",
+        "text": "UDP"
+      },
+      {
+        "letter": "c",
+        "text": "Both TCP and UDP"
+      },
+      {
+        "letter": "d",
+        "text": "Neither TCP nor UDP"
+      }
+    ],
+    "answer": "b",
+    "explanation": "UDP has no ACKs and no retransmission.",
+    "source": "PB Q314",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 20,
+    "question": "ARQ stands for",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Automatic Repeat Request"
+      },
+      {
+        "letter": "b",
+        "text": "Automatic Request Repeat"
+      },
+      {
+        "letter": "c",
+        "text": "Application Repeat Request"
+      },
+      {
+        "letter": "d",
+        "text": "Application Request Repeat"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**A**utomatic **R**epeat re**Q**uest.",
+    "source": "PB Q315",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 21,
+    "question": "What is the efficiency of a system using synchronous TDM if 2 of the 5 devices have nothing to send?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "0.2"
+      },
+      {
+        "letter": "b",
+        "text": "0.5"
+      },
+      {
+        "letter": "c",
+        "text": "0.6"
+      },
+      {
+        "letter": "d",
+        "text": "1"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Synchronous TDM still gives every device a slot. 3 of 5 slots are used → **0.6 (60%)**. Same question in the T2 paper.",
+    "source": "PB Q316",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 22,
+    "question": "Ports 0–1023 are called ______, 1024–49151 ______, and 49152–65535 ______.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "well-known, registered, static or public"
+      },
+      {
+        "letter": "b",
+        "text": "unknown, registered, dynamic or private"
+      },
+      {
+        "letter": "c",
+        "text": "well-known, registered, dynamic or private"
+      },
+      {
+        "letter": "d",
+        "text": "well-known, unregistered, dynamic or private"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Well-known** (HTTP 80, SMTP 25…), **registered**, **dynamic/private** (ephemeral client ports).",
+    "source": "PB Q317",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 23,
+    "question": "What is the minimum and maximum size of the TCP header in bytes?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "40, 60"
+      },
+      {
+        "letter": "b",
+        "text": "20, 60"
+      },
+      {
+        "letter": "c",
+        "text": "20, 30"
+      },
+      {
+        "letter": "d",
+        "text": "60, 120"
+      }
+    ],
+    "answer": "b",
+    "explanation": "HLEN is 4 bits counting 4-byte words: min 5 × 4 = **20**, max 15 × 4 = **60**.",
+    "source": "PB Q318",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 24,
+    "question": "A link has capacity 100 packets/s and RTT 100 ms. With a fixed sliding window of 4 packets, what is the maximum traffic rate?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "4 packets/s"
+      },
+      {
+        "letter": "b",
+        "text": "40 packets/s"
+      },
+      {
+        "letter": "c",
+        "text": "100 packets/s"
+      },
+      {
+        "letter": "d",
+        "text": "400 packets/s"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Throughput = window / RTT = 4 / 0.1 = **40 packets/s**, which is below the 100 capacity, so 40 it is.",
+    "source": "PB Q320",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 25,
+    "question": "Paper version: capacity 150 packets/s, RTT 120 ms, Selective Repeat with a fixed window of 8 packets. Maximum traffic rate?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "8 packets/s"
+      },
+      {
+        "letter": "b",
+        "text": "66.67 packets/s"
+      },
+      {
+        "letter": "c",
+        "text": "120 packets/s"
+      },
+      {
+        "letter": "d",
+        "text": "150 packets/s"
+      }
+    ],
+    "answer": "b",
+    "explanation": "8 / 0.12 = **66.67 packets/s**. It is below 150, so the window is the limit.",
+    "source": "Paper T2 Q4.4",
+    "bookKeyCorrected": false
+  }
+]

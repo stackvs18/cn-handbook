@@ -1,0 +1,673 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/* Tokens. Warm black with one clay-orange accent and warm-white text.  */
+/* Green and red only ever mean "right" and "wrong".                   */
+/* ------------------------------------------------------------------ */
+
+:root,
+[data-theme="dark"] {
+  --bg: #1a1915;
+  --surface: #211f1b;
+  --hover: #2a2823;
+  --line: #2f2d28;
+  --line-strong: #45423b;
+  --fg: #ece9e1;
+  --muted: #b0aa9f;
+  --faint: #7f7a70;
+  --accent: #d97757;
+  --accent-fg: #1a1915;
+  --accent-bg: rgba(217, 119, 87, 0.1);
+  --accent-line: rgba(217, 119, 87, 0.45);
+  --code-bg: #171612;
+  --inline-code-bg: #2a2823;
+  --selection: #d97757;
+  --selection-fg: #1a1915;
+  --good: #7fc89a;
+  --good-bg: rgba(127, 200, 154, 0.08);
+  --good-line: rgba(127, 200, 154, 0.38);
+  --bad: #f08a7a;
+  --bad-bg: rgba(240, 138, 122, 0.08);
+  --bad-line: rgba(240, 138, 122, 0.38);
+  --warn: #e8b25e;
+  --warn-bg: rgba(232, 178, 94, 0.08);
+  --warn-line: rgba(232, 178, 94, 0.32);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #faf9f5;
+  --surface: #f3f1ea;
+  --hover: #ebe8df;
+  --line: #e3dfd4;
+  --line-strong: #cfc9bb;
+  --fg: #1f1e1a;
+  --muted: #5e5a51;
+  --faint: #8c877c;
+  --accent: #c15f3c;
+  --accent-fg: #ffffff;
+  --accent-bg: rgba(193, 95, 60, 0.08);
+  --accent-line: rgba(193, 95, 60, 0.4);
+  --code-bg: #f3f1ea;
+  --inline-code-bg: #ebe8df;
+  --selection: #c15f3c;
+  --selection-fg: #ffffff;
+  --good: #2f7d4f;
+  --good-bg: #eef7f0;
+  --good-line: #a9d5b7;
+  --bad: #b3402c;
+  --bad-bg: #fbefec;
+  --bad-line: #eab6aa;
+  --warn: #8a5a00;
+  --warn-bg: #fbf3e2;
+  --warn-line: #e6cd8e;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-hover: var(--hover);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-fg: var(--fg);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-bg: var(--accent-bg);
+  --color-accent-line: var(--accent-line);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-good: var(--good);
+  --color-good-bg: var(--good-bg);
+  --color-good-line: var(--good-line);
+  --color-bad: var(--bad);
+  --color-bad-bg: var(--bad-bg);
+  --color-bad-line: var(--bad-line);
+  --color-warn: var(--warn);
+  --color-warn-bg: var(--warn-bg);
+  --color-warn-line: var(--warn-line);
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, "Times New Roman", serif;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    min-height: 100dvh;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--selection);
+    color: var(--selection-fg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Small shared pieces                                                  */
+/* ------------------------------------------------------------------ */
+
+@layer components {
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .kbd {
+    display: inline-block;
+    min-width: 1.4em;
+    padding: 0.1em 0.4em;
+    border: 1px solid var(--line-strong);
+    border-bottom-width: 2px;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--muted);
+    background: var(--bg);
+  }
+
+  .icon-btn {
+    display: inline-grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    color: var(--muted);
+    transition: background-color 0.15s, color 0.15s;
+  }
+  .icon-btn:hover {
+    background: var(--hover);
+    color: var(--fg);
+  }
+
+  .nav-link {
+    padding: 0.35rem 0.7rem;
+    border-radius: 0.45rem;
+    color: var(--muted);
+    transition: color 0.15s, background-color 0.15s;
+  }
+  .nav-link:hover,
+  .nav-link[aria-current="page"] {
+    color: var(--fg);
+    background: var(--hover);
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -3rem;
+    z-index: 100;
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.5rem;
+    background: var(--fg);
+    color: var(--bg);
+    font-size: 0.85rem;
+  }
+  .skip-link:focus {
+    top: 0.75rem;
+  }
+
+  .drawer {
+    animation: drawer-in 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .card {
+    border: 1px solid var(--line);
+    border-radius: 0.9rem;
+    background: var(--surface);
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+  a.card:hover {
+    border-color: var(--accent-line);
+    background: var(--hover);
+  }
+
+  /* Round "pill" buttons, same as the handbook's hero buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 2.75rem;
+    padding: 0 1.4rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: opacity 0.15s, border-color 0.15s, background-color 0.15s;
+  }
+  .btn-sm {
+    height: 2.1rem;
+    padding: 0 0.95rem;
+    font-size: 0.82rem;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-fg);
+  }
+  .btn-primary:hover {
+    opacity: 0.88;
+  }
+  .btn-ghost {
+    border: 1px solid var(--line-strong);
+    color: var(--fg);
+  }
+  .btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .btn:disabled {
+    opacity: 0.4;
+  }
+
+  .text-link {
+    color: var(--muted);
+    text-decoration: underline;
+    text-decoration-color: var(--line-strong);
+    text-underline-offset: 3px;
+    transition: color 0.15s, text-decoration-color 0.15s;
+  }
+  .text-link:hover {
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+  }
+
+  /* Segmented control: a row of small toggle buttons */
+  .segmented {
+    display: inline-flex;
+    gap: 2px;
+    padding: 2px;
+    border: 1px solid var(--line);
+    border-radius: 0.55rem;
+    background: var(--surface);
+  }
+  .segmented button {
+    height: 1.8rem;
+    padding: 0 0.7rem;
+    border-radius: 0.4rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .segmented button:hover {
+    color: var(--fg);
+  }
+  .segmented button[aria-pressed="true"] {
+    background: var(--accent-bg);
+    color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent-line);
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    height: 1.25rem;
+    padding: 0 0.45rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--faint);
+    white-space: nowrap;
+  }
+  .tag-warn {
+    border-color: var(--warn-line);
+    background: var(--warn-bg);
+    color: var(--warn);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Question cards (practice, mistakes, mock test, all MCQs)            */
+/* ------------------------------------------------------------------ */
+
+.question-text code,
+.option-text code,
+.explanation code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: var(--inline-code-bg);
+}
+
+.question-text strong,
+.option-text strong,
+.explanation strong {
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.question-text em,
+.explanation em {
+  font-family: var(--font-serif);
+  font-size: 1.06em;
+}
+
+.option {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  background: var(--bg);
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  transition: border-color 0.12s, background-color 0.12s, opacity 0.12s;
+}
+button.option:not(:disabled):hover {
+  border-color: var(--line-strong);
+  background: var(--surface);
+}
+.option-letter {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: -1px;
+  border: 1px solid var(--line-strong);
+  border-radius: 0.375rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.option[data-state="correct"] {
+  border-color: var(--good-line);
+  background: var(--good-bg);
+}
+.option[data-state="correct"] .option-letter {
+  border-color: var(--good);
+  background: var(--good);
+  color: var(--bg);
+}
+.option[data-state="wrong"] {
+  border-color: var(--bad-line);
+  background: var(--bad-bg);
+}
+.option[data-state="wrong"] .option-letter {
+  border-color: var(--bad);
+  background: var(--bad);
+  color: var(--bg);
+}
+.option[data-state="faded"] {
+  opacity: 0.55;
+}
+.option[data-state="picked"] {
+  border-color: var(--accent);
+}
+.option[data-state="picked"] .option-letter {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+/* Jumping to a question from search briefly highlights it */
+.question-card {
+  scroll-margin-top: 8rem;
+}
+.question-card:target {
+  animation: flash 2s ease-out;
+}
+
+/* "All MCQs" page: the toggles add these attributes to hide things */
+[data-hide-answers="true"] .option[data-state="correct"] {
+  border-color: var(--line);
+  background: var(--bg);
+}
+[data-hide-answers="true"] .option[data-state="correct"] .option-letter {
+  border-color: var(--line-strong);
+  background: transparent;
+  color: var(--muted);
+}
+[data-hide-answers="true"] .answer-only,
+[data-hide-explanations="true"] .explanation-block {
+  display: none;
+}
+
+@keyframes flash {
+  0%,
+  30% {
+    background: var(--hover);
+  }
+  100% {
+    background: transparent;
+  }
+}
+
+@keyframes drawer-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .drawer,
+  .cursor-blink,
+  .question-card:target {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Guide typography                                                     */
+/* ------------------------------------------------------------------ */
+
+.prose {
+  font-size: 1.0625rem;
+  line-height: 1.78;
+  color: var(--fg);
+  overflow-wrap: break-word;
+}
+
+.prose > * + * {
+  margin-top: 1.15em;
+}
+
+.prose p,
+.prose li {
+  color: color-mix(in srgb, var(--fg) 88%, var(--bg));
+}
+
+.prose h2 {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--fg);
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.prose h3 {
+  margin-top: 2.2em;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+
+.prose h2 + *,
+.prose h3 + * {
+  margin-top: 0.75em;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.prose em {
+  font-family: var(--font-serif);
+  font-size: 1.08em;
+}
+
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.4em;
+}
+.prose ul {
+  list-style: none;
+}
+.prose ul > li {
+  position: relative;
+}
+.prose ul > li::before {
+  content: "";
+  position: absolute;
+  left: -1em;
+  top: 0.78em;
+  width: 0.35em;
+  height: 1px;
+  background: var(--accent);
+}
+.prose ol {
+  list-style: decimal;
+}
+.prose ol > li::marker {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--faint);
+}
+.prose li + li {
+  margin-top: 0.4em;
+}
+.prose li > ul,
+.prose li > ol {
+  margin-top: 0.4em;
+}
+
+/* Callouts: every "> quote" in the guides is a tip or a warning */
+.prose blockquote {
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 0.75rem;
+  background: var(--surface);
+  font-size: 0.97rem;
+}
+.prose blockquote > * + * {
+  margin-top: 0.6em;
+}
+
+/* Worked examples ("Ex 1.", "Type 2.") get a quiet box */
+.prose p.example {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--accent-line);
+  border-radius: 0.75rem;
+  background: var(--surface);
+}
+
+.prose :not(pre) > code {
+  padding: 0.12em 0.38em;
+  border-radius: 5px;
+  background: var(--inline-code-bg);
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+}
+
+.prose pre {
+  overflow-x: auto;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--code-bg);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.prose .table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+.prose th {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.prose td {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.prose tr:last-child td {
+  border-bottom: 0;
+}
+
+/* Formula sheet cards reuse the list styles at a smaller size */
+.formula-card ul {
+  padding-left: 1.1em;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+/* Accent touches: ### headings, the label of an example box, code blocks */
+.prose h3 {
+  color: var(--accent);
+}
+.prose p.example > strong:first-child {
+  color: var(--accent);
+}
+.prose pre {
+  border-left: 3px solid var(--accent-line);
+}

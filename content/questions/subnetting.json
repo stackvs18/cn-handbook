@@ -1,0 +1,366 @@
+[
+  {
+    "number": 1,
+    "question": "C1 has IP 203.197.2.53 with netmask 255.255.128.0. C2 has IP 203.197.75.201 with netmask 255.255.192.0. Which statement is true?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "C1 assumes C2 is on the same network, but C2 assumes C1 is on a different network"
+      },
+      {
+        "letter": "b",
+        "text": "C1 and C2 both assume they are on the same network"
+      },
+      {
+        "letter": "c",
+        "text": "C2 assumes C1 is on the same network, but C1 assumes C2 is on a different network"
+      },
+      {
+        "letter": "d",
+        "text": "C1 and C2 both assume they are on different networks"
+      }
+    ],
+    "answer": "a",
+    "explanation": "With C1's mask (/17): C1 → 203.197.0.0, C2 → 203.197.0.0, the **same**. With C2's mask (/18): C2 → 203.197.64.0, C1 → 203.197.0.0, **different**.",
+    "source": "PB Q227",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "If C1 and C2 both assume they are on different networks, which action is necessary for them to communicate?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Finding the IP address from the DNS"
+      },
+      {
+        "letter": "b",
+        "text": "Finding the IP address of the default gateway"
+      },
+      {
+        "letter": "c",
+        "text": "Finding the IP address that corresponds to a MAC address"
+      },
+      {
+        "letter": "d",
+        "text": "Finding the MAC address that corresponds to an IP address"
+      }
+    ],
+    "answer": "d",
+    "explanation": "To send a frame you always need a **MAC address for an IP address**. That is ARP. (The book's key is D.)",
+    "source": "PB Q228",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "You have an IP address of 172.16.13.7 with a 255.255.255.128 mask. What is your class, subnet address and broadcast address?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Class A, 172.16.13.0, 172.16.13.127"
+      },
+      {
+        "letter": "b",
+        "text": "Class B, 172.16.13.0, 172.16.13.127"
+      },
+      {
+        "letter": "c",
+        "text": "Class B, 172.16.13.0, 172.16.13.255"
+      },
+      {
+        "letter": "d",
+        "text": "Class B, 172.16.0.0, 172.16.255.255"
+      }
+    ],
+    "answer": "b",
+    "explanation": "172 → class B. Mask .128 → block 128 in the 4th octet. 7 lies in 0–127 → subnet **172.16.13.0**, broadcast **172.16.13.127**.",
+    "source": "PB Q232",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "If you wanted 12 subnets with a Class C network ID, which subnet mask would you use?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "255.255.255.252"
+      },
+      {
+        "letter": "b",
+        "text": "255.255.255.255"
+      },
+      {
+        "letter": "c",
+        "text": "255.255.255.248"
+      },
+      {
+        "letter": "d",
+        "text": "255.255.255.240"
+      }
+    ],
+    "answer": "d",
+    "explanation": "2³ = 8 < 12 ≤ 16 = 2⁴ → borrow **4 bits** → 11110000 = **.240**.",
+    "source": "PB Q233",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "If you wanted 10 subnets with a Class C network ID, which subnet mask would you use?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "255.255.255.252"
+      },
+      {
+        "letter": "b",
+        "text": "255.255.255.255"
+      },
+      {
+        "letter": "c",
+        "text": "255.255.255.248"
+      },
+      {
+        "letter": "d",
+        "text": "255.255.255.240"
+      }
+    ],
+    "answer": "d",
+    "explanation": "10 subnets also need 4 bits (8 is too few) → **255.255.255.240**.",
+    "source": "PB Q234",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "IP 160.168.30.100 with net mask 255.255.240.0. What is the broadcast address?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "160.168.31.255"
+      },
+      {
+        "letter": "b",
+        "text": "160.168.30.255"
+      },
+      {
+        "letter": "c",
+        "text": "160.168.24.3"
+      },
+      {
+        "letter": "d",
+        "text": "160.168.25.53"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Interesting octet = 3rd, mask 240 → block 16. 30 lies in 16–31 → broadcast **160.168.31.255**.",
+    "source": "PB Q235",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "A router's forwarding table is shown (figure in the book). A packet for 200.150.68.118 arrives. It will be forwarded to the interface with ID",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1"
+      },
+      {
+        "letter": "b",
+        "text": "2"
+      },
+      {
+        "letter": "c",
+        "text": "3"
+      },
+      {
+        "letter": "d",
+        "text": "4"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The table is a figure in the practice book, so remember the key: **3**. Method: AND the address with every mask and pick the **longest prefix** that matches.",
+    "source": "PB Q236",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "In a class B subnet, IP = 125.134.112.66 and mask = 255.255.224.0. What is the network (first) address?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "125.134.112.0"
+      },
+      {
+        "letter": "b",
+        "text": "125.134.96.0"
+      },
+      {
+        "letter": "c",
+        "text": "125.134.64.0"
+      },
+      {
+        "letter": "d",
+        "text": "125.134.0.0"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Mask 224 → block 32 in the 3rd octet. Multiples of 32: 64, 96, 128 → 112 falls in 96 → **125.134.96.0**.",
+    "source": "PB Q260",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "You have 10.0.0.0/8 and need 16 subnets. Which mask should you use?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "255.192.0.0"
+      },
+      {
+        "letter": "b",
+        "text": "255.224.0.0"
+      },
+      {
+        "letter": "c",
+        "text": "255.240.0.0"
+      },
+      {
+        "letter": "d",
+        "text": "255.255.0.0"
+      }
+    ],
+    "answer": "c",
+    "explanation": "2⁴ = 16 → borrow 4 bits → /8 + 4 = /12 → **255.240.0.0**.",
+    "source": "PB Q256",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "Network 10.1.1.0/22 must support at least 100 hosts. Is it sufficient?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "No, it supports only 62 hosts"
+      },
+      {
+        "letter": "b",
+        "text": "No, it supports only 254 hosts"
+      },
+      {
+        "letter": "c",
+        "text": "Yes, it supports 1022 hosts"
+      },
+      {
+        "letter": "d",
+        "text": "Yes, it supports exactly 100 hosts"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Host bits = 32 − 22 = 10 → 2¹⁰ − 2 = **1022** ≥ 100. Sufficient. The smallest block that would fit is /25 (126 hosts).",
+    "source": "PB Q254",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 11,
+    "question": "190.76.0.0/16 is split into 1024 subnets using 10 bits. What are the first and last usable host addresses in the last subnet?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "190.76.255.192 and 190.76.255.255"
+      },
+      {
+        "letter": "b",
+        "text": "190.76.255.193 and 190.76.255.254"
+      },
+      {
+        "letter": "c",
+        "text": "190.76.255.129 and 190.76.255.190"
+      },
+      {
+        "letter": "d",
+        "text": "190.76.254.1 and 190.76.255.254"
+      }
+    ],
+    "answer": "b",
+    "explanation": "/16 + 10 = /26 → block 64. The last subnet is 190.76.255.192/26 (broadcast .255). Hosts **.193 to .254**.",
+    "source": "PB Q257",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 12,
+    "question": "In 143.128.67.235/20, x = 3rd octet and y = 4th octet of the last host address. What is x × y?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "20066"
+      },
+      {
+        "letter": "b",
+        "text": "15"
+      },
+      {
+        "letter": "c",
+        "text": "19304"
+      },
+      {
+        "letter": "d",
+        "text": "16256"
+      }
+    ],
+    "answer": "a",
+    "explanation": "/20 → block 16 in the 3rd octet. 67 → 64–79. Broadcast 143.128.79.255, last host **143.128.79.254**. x × y = 79 × 254 = **20066**. (The class notes counted 1-bits instead and got 15. Use the decimal reading, which is what the question says.)",
+    "source": "PB Q259",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 13,
+    "question": "What is the network ID of 200.10.20.40/28?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "200.10.20.0"
+      },
+      {
+        "letter": "b",
+        "text": "200.10.20.32"
+      },
+      {
+        "letter": "c",
+        "text": "200.10.20.40"
+      },
+      {
+        "letter": "d",
+        "text": "200.10.20.48"
+      }
+    ],
+    "answer": "b",
+    "explanation": "/28 → mask 240 → block 16. Multiples of 16 ≤ 40: 32 → **200.10.20.32**. Broadcast 200.10.20.47.",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 14,
+    "question": "In 223.1.1.0/24, the /24 notation is known as a",
+    "options": [
+      {
+        "letter": "a",
+        "text": "subnet mask"
+      },
+      {
+        "letter": "b",
+        "text": "CIDR"
+      },
+      {
+        "letter": "c",
+        "text": "both a and b"
+      },
+      {
+        "letter": "d",
+        "text": "none of the above"
+      }
+    ],
+    "answer": "c",
+    "explanation": "It is **CIDR (slash) notation**, and it also states the **subnet mask** (24 ones). The key is both.",
+    "source": "PB Q269",
+    "bookKeyCorrected": false
+  }
+]

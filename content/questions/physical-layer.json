@@ -1,0 +1,990 @@
+[
+  {
+    "number": 1,
+    "question": "In a ______ connection, three or more devices share a link.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "point to point"
+      },
+      {
+        "letter": "b",
+        "text": "multipoint"
+      },
+      {
+        "letter": "c",
+        "text": "(a) and (b)"
+      },
+      {
+        "letter": "d",
+        "text": "None of the above"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Multipoint**.",
+    "source": "PB Q68",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "Which transmission direction is **not** a legitimate channel?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Simplex"
+      },
+      {
+        "letter": "b",
+        "text": "Half Duplex"
+      },
+      {
+        "letter": "c",
+        "text": "Full Duplex"
+      },
+      {
+        "letter": "d",
+        "text": "Double Duplex"
+      }
+    ],
+    "answer": "d",
+    "explanation": "There is no \"double duplex\".",
+    "source": "PB Q69",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "Communication in both directions, but only one direction at a time, is called",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Half Duplex"
+      },
+      {
+        "letter": "b",
+        "text": "Simplex"
+      },
+      {
+        "letter": "c",
+        "text": "Full Duplex"
+      },
+      {
+        "letter": "d",
+        "text": "Double Duplex"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Half duplex** (walkie-talkie).",
+    "source": "PB Q71",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "Network components are connected to the same cable in the ______ topology.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "MESH"
+      },
+      {
+        "letter": "b",
+        "text": "BUS"
+      },
+      {
+        "letter": "c",
+        "text": "STAR"
+      },
+      {
+        "letter": "d",
+        "text": "RING"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Bus** = one backbone cable.",
+    "source": "PB Q72",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "The geometric arrangement of devices on a network is called",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Protocols"
+      },
+      {
+        "letter": "b",
+        "text": "Topology"
+      },
+      {
+        "letter": "c",
+        "text": "Trailer"
+      },
+      {
+        "letter": "d",
+        "text": "LAN"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Topology**.",
+    "source": "PB Q73",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "Which topology requires a central controller or hub?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "MESH"
+      },
+      {
+        "letter": "b",
+        "text": "BUS"
+      },
+      {
+        "letter": "c",
+        "text": "STAR"
+      },
+      {
+        "letter": "d",
+        "text": "RING"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Star**.",
+    "source": "PB Q74",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "______ topology requires a multipoint connection.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "MESH"
+      },
+      {
+        "letter": "b",
+        "text": "BUS"
+      },
+      {
+        "letter": "c",
+        "text": "STAR"
+      },
+      {
+        "letter": "d",
+        "text": "RING"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Bus**.",
+    "source": "PB Q75",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "Which topology has the highest reliability?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "MESH"
+      },
+      {
+        "letter": "b",
+        "text": "BUS"
+      },
+      {
+        "letter": "c",
+        "text": "STAR"
+      },
+      {
+        "letter": "d",
+        "text": "RING"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Mesh**: every pair has its own link.",
+    "source": "PB Q76",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "Frequency of failure and recovery time after a failure measure a network's",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Reliability"
+      },
+      {
+        "letter": "b",
+        "text": "Performance"
+      },
+      {
+        "letter": "c",
+        "text": "Security"
+      },
+      {
+        "letter": "d",
+        "text": "Feasibility"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Reliability**.",
+    "source": "PB Q77",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "The number of cables required for a mesh topology is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "n"
+      },
+      {
+        "letter": "b",
+        "text": "n − 1"
+      },
+      {
+        "letter": "c",
+        "text": "one backbone"
+      },
+      {
+        "letter": "d",
+        "text": "n(n − 1)/2"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Every pair needs one link: **n(n − 1)/2**.",
+    "source": "PB Q78",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 11,
+    "question": "99 devices with a dedicated link between every pair. How many links?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "4851"
+      },
+      {
+        "letter": "b",
+        "text": "4951"
+      },
+      {
+        "letter": "c",
+        "text": "5858"
+      },
+      {
+        "letter": "d",
+        "text": "9999"
+      }
+    ],
+    "answer": "a",
+    "explanation": "99 × 98 / 2 = **4851**. Same question in the T2 paper.",
+    "source": "PB Q79",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 12,
+    "question": "What is the number of cables required for a bus topology?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "n"
+      },
+      {
+        "letter": "b",
+        "text": "n − 1"
+      },
+      {
+        "letter": "c",
+        "text": "n(n − 1)/2"
+      },
+      {
+        "letter": "d",
+        "text": "one backbone and n drop lines"
+      }
+    ],
+    "answer": "d",
+    "explanation": "One backbone plus a drop line per device.",
+    "source": "PB Q80",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 13,
+    "question": "The topology that describes the geometric arrangement of components that make up the LAN is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "complex"
+      },
+      {
+        "letter": "b",
+        "text": "logical"
+      },
+      {
+        "letter": "c",
+        "text": "physical"
+      },
+      {
+        "letter": "d",
+        "text": "incremental"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Physical** topology.",
+    "source": "PB Q81",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 14,
+    "question": "Signals with a frequency below 2 MHz use ______ propagation.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "ground"
+      },
+      {
+        "letter": "b",
+        "text": "sky"
+      },
+      {
+        "letter": "c",
+        "text": "line of sight"
+      },
+      {
+        "letter": "d",
+        "text": "none of above"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Ground** wave.",
+    "source": "PB Q82",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 15,
+    "question": "A parabolic dish antenna is a(n) ______ antenna.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "omnidirectional"
+      },
+      {
+        "letter": "b",
+        "text": "unidirectional"
+      },
+      {
+        "letter": "c",
+        "text": "bidirectional"
+      },
+      {
+        "letter": "d",
+        "text": "horn"
+      }
+    ],
+    "answer": "b",
+    "explanation": "It points one way: **unidirectional**.",
+    "source": "PB Q83",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 16,
+    "question": "______ cable consists of two insulated copper wires twisted together.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Coaxial"
+      },
+      {
+        "letter": "b",
+        "text": "Fiber-optic"
+      },
+      {
+        "letter": "c",
+        "text": "Twisted-pair"
+      },
+      {
+        "letter": "d",
+        "text": "None of the above"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Twisted pair**.",
+    "source": "PB Q84",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 17,
+    "question": "A(n) ______ medium provides a physical conduit from one device to another.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "guided"
+      },
+      {
+        "letter": "b",
+        "text": "unguided"
+      },
+      {
+        "letter": "c",
+        "text": "either (a) or (b)"
+      },
+      {
+        "letter": "d",
+        "text": "None of the above"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Guided** (wired).",
+    "source": "PB Q85",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 18,
+    "question": "Which cable consists of a central conductor and a shield?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Coaxial"
+      },
+      {
+        "letter": "b",
+        "text": "Fiber-optic"
+      },
+      {
+        "letter": "c",
+        "text": "Twisted-pair"
+      },
+      {
+        "letter": "d",
+        "text": "None of the above"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Coaxial**.",
+    "source": "PB Q86",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 19,
+    "question": "______ cables carry data signals in the form of light.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Coaxial"
+      },
+      {
+        "letter": "b",
+        "text": "Fiber-optic"
+      },
+      {
+        "letter": "c",
+        "text": "Twisted-pair"
+      },
+      {
+        "letter": "d",
+        "text": "None of the above"
+      }
+    ],
+    "answer": "b",
+    "explanation": "**Fiber optic**.",
+    "source": "PB Q87",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 20,
+    "question": "Radio waves are",
+    "options": [
+      {
+        "letter": "a",
+        "text": "omnidirectional"
+      },
+      {
+        "letter": "b",
+        "text": "unidirectional"
+      },
+      {
+        "letter": "c",
+        "text": "bidirectional"
+      },
+      {
+        "letter": "d",
+        "text": "both (a) & (b)"
+      }
+    ],
+    "answer": "a",
+    "explanation": "They spread in all directions: **omnidirectional**.",
+    "source": "PB Q88",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 21,
+    "question": "The physical layer translates logical communication requests from the ______ into hardware-specific operations.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "data link"
+      },
+      {
+        "letter": "b",
+        "text": "network"
+      },
+      {
+        "letter": "c",
+        "text": "transport"
+      },
+      {
+        "letter": "d",
+        "text": "application"
+      }
+    ],
+    "answer": "a",
+    "explanation": "From the layer just above it: **data link**.",
+    "source": "PB Q89",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 22,
+    "question": "In fiber optics, the signal is ______ waves.",
+    "options": [
+      {
+        "letter": "a",
+        "text": "light"
+      },
+      {
+        "letter": "b",
+        "text": "radio"
+      },
+      {
+        "letter": "c",
+        "text": "infrared"
+      },
+      {
+        "letter": "d",
+        "text": "very low frequency"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Light**.",
+    "source": "PB Q90",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 23,
+    "question": "The inner core of an optical fiber is made of",
+    "options": [
+      {
+        "letter": "a",
+        "text": "copper"
+      },
+      {
+        "letter": "b",
+        "text": "bimetallic"
+      },
+      {
+        "letter": "c",
+        "text": "glass or plastic"
+      },
+      {
+        "letter": "d",
+        "text": "liquid"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Glass or plastic**.",
+    "source": "PB Q91",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 24,
+    "question": "Which transmission medium has the highest speed?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "coaxial"
+      },
+      {
+        "letter": "b",
+        "text": "electric cable"
+      },
+      {
+        "letter": "c",
+        "text": "twisted pair"
+      },
+      {
+        "letter": "d",
+        "text": "optical fiber"
+      }
+    ],
+    "answer": "d",
+    "explanation": "**Optical fiber**.",
+    "source": "PB Q92",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 25,
+    "question": "Which is **not** a transmission medium?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Telephone lines"
+      },
+      {
+        "letter": "b",
+        "text": "Coaxial cables"
+      },
+      {
+        "letter": "c",
+        "text": "Modem"
+      },
+      {
+        "letter": "d",
+        "text": "Microwave systems"
+      }
+    ],
+    "answer": "c",
+    "explanation": "A modem is a device.",
+    "source": "PB Q93",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 26,
+    "question": "An advantage of fiber optic transmission is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "resistance to data theft"
+      },
+      {
+        "letter": "b",
+        "text": "fast data transmission rate"
+      },
+      {
+        "letter": "c",
+        "text": "low noise level"
+      },
+      {
+        "letter": "d",
+        "text": "All of above"
+      }
+    ],
+    "answer": "d",
+    "explanation": "All three.",
+    "source": "PB Q94",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 27,
+    "question": "Which line is best suited to interactive processing applications?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Narrow band channel"
+      },
+      {
+        "letter": "b",
+        "text": "Full duplex lines"
+      },
+      {
+        "letter": "c",
+        "text": "Simplex lines"
+      },
+      {
+        "letter": "d",
+        "text": "Mixed band channel"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Both sides talk at once: **full duplex**.",
+    "source": "PB Q95",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 28,
+    "question": "Guided media is also known as",
+    "options": [
+      {
+        "letter": "a",
+        "text": "bound media"
+      },
+      {
+        "letter": "b",
+        "text": "unguided media"
+      },
+      {
+        "letter": "c",
+        "text": "unbound media"
+      },
+      {
+        "letter": "d",
+        "text": "None of the above"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Bound** media.",
+    "source": "PB Q96",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 29,
+    "question": "How many forms of twisted pair cable are there?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1"
+      },
+      {
+        "letter": "b",
+        "text": "4"
+      },
+      {
+        "letter": "c",
+        "text": "2"
+      },
+      {
+        "letter": "d",
+        "text": "3"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**2**: UTP and STP.",
+    "source": "PB Q97",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 30,
+    "question": "Which is **not** guided media?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Coaxial"
+      },
+      {
+        "letter": "b",
+        "text": "Fiber-optic"
+      },
+      {
+        "letter": "c",
+        "text": "Twisted-pair"
+      },
+      {
+        "letter": "d",
+        "text": "Microwave"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Microwave is wireless (unguided).",
+    "source": "PB Q98",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 31,
+    "question": "Which are coaxial cable types?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "thinnet"
+      },
+      {
+        "letter": "b",
+        "text": "thicknet"
+      },
+      {
+        "letter": "c",
+        "text": "copper"
+      },
+      {
+        "letter": "d",
+        "text": "A and B both"
+      }
+    ],
+    "answer": "d",
+    "explanation": "**Thinnet and thicknet**.",
+    "source": "PB Q99",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 32,
+    "question": "Which connector does **not** belong to coaxial cable?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "barrel"
+      },
+      {
+        "letter": "b",
+        "text": "UTP"
+      },
+      {
+        "letter": "c",
+        "text": "BNC"
+      },
+      {
+        "letter": "d",
+        "text": "T-connector"
+      }
+    ],
+    "answer": "b",
+    "explanation": "UTP is twisted pair.",
+    "source": "PB Q100",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 33,
+    "question": "The condition for total internal reflection is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "incidence angle greater than critical angle"
+      },
+      {
+        "letter": "b",
+        "text": "incidence angle less than critical angle"
+      },
+      {
+        "letter": "c",
+        "text": "incidence angle equal to critical angle"
+      },
+      {
+        "letter": "d",
+        "text": "not related"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Angle **greater** than the critical angle.",
+    "source": "PB Q101",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 34,
+    "question": "Which task is performed by the physical layer?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Logical addressing"
+      },
+      {
+        "letter": "b",
+        "text": "Routing of packets"
+      },
+      {
+        "letter": "c",
+        "text": "Transmission of raw bits over a channel"
+      },
+      {
+        "letter": "d",
+        "text": "Error detection and correction"
+      }
+    ],
+    "answer": "c",
+    "explanation": "**Raw bits**.",
+    "source": "PB Q102",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 35,
+    "question": "Which medium is least affected by electromagnetic interference?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Coaxial cable"
+      },
+      {
+        "letter": "b",
+        "text": "Fiber optic cable"
+      },
+      {
+        "letter": "c",
+        "text": "Twisted pair"
+      },
+      {
+        "letter": "d",
+        "text": "Shielded twisted pair"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Light ignores EMI: **fiber**.",
+    "source": "PB Q103",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 36,
+    "question": "Which statement about microwave transmission is true?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Used only for wired communication"
+      },
+      {
+        "letter": "b",
+        "text": "Frequencies below 1 MHz"
+      },
+      {
+        "letter": "c",
+        "text": "Easily passes through obstacles"
+      },
+      {
+        "letter": "d",
+        "text": "Requires line-of-sight propagation"
+      }
+    ],
+    "answer": "d",
+    "explanation": "**Line of sight**.",
+    "source": "PB Q104",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 37,
+    "question": "In which topology does each device have a dedicated point-to-point link to every other device?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "MESH"
+      },
+      {
+        "letter": "b",
+        "text": "BUS"
+      },
+      {
+        "letter": "c",
+        "text": "STAR"
+      },
+      {
+        "letter": "d",
+        "text": "RING"
+      }
+    ],
+    "answer": "a",
+    "explanation": "**Mesh**.",
+    "source": "PB Q105",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 38,
+    "question": "In a ring topology, data travels in",
+    "options": [
+      {
+        "letter": "a",
+        "text": "multiple paths simultaneously"
+      },
+      {
+        "letter": "b",
+        "text": "one direction or sometimes two directions around the ring"
+      },
+      {
+        "letter": "c",
+        "text": "random directions"
+      },
+      {
+        "letter": "d",
+        "text": "a star-shaped pattern"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Around the ring, usually one way.",
+    "source": "PB Q106",
+    "bookKeyCorrected": false
+  }
+]

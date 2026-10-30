@@ -1,0 +1,210 @@
+[
+  {
+    "number": 1,
+    "question": "223.1.17.0/24 must be split into Subnet 1 (≥ 60 hosts), Subnet 2 (≥ 90 hosts) and Subnet 3 (≥ 12 hosts). Which allocation is correct?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "S2 223.1.17.0/25, S1 223.1.17.128/26, S3 223.1.17.192/28"
+      },
+      {
+        "letter": "b",
+        "text": "S1 223.1.17.0/26, S2 223.1.17.64/25, S3 223.1.17.192/28"
+      },
+      {
+        "letter": "c",
+        "text": "S2 223.1.17.0/24, S1 223.1.17.128/26, S3 223.1.17.192/27"
+      },
+      {
+        "letter": "d",
+        "text": "S1 223.1.17.0/25, S2 223.1.17.128/25, S3 223.1.17.0/28"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Largest first. 90 → 128 block (/25) at .0. 60 → 64 (/26) at .128. 12 → 16 (/28) at .192. (B is wrong: a /25 cannot start at .64.)",
+    "source": "PB Q248",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "Jio has 172.20.0.0/16. Group 1: 32 customers × 512 addresses. What mask does each Group 1 customer get?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "255.255.252.0"
+      },
+      {
+        "letter": "b",
+        "text": "255.255.254.0"
+      },
+      {
+        "letter": "c",
+        "text": "255.255.255.0"
+      },
+      {
+        "letter": "d",
+        "text": "255.255.255.128"
+      }
+    ],
+    "answer": "b",
+    "explanation": "512 = 2⁹ → 9 host bits → /23 → **255.255.254.0**.",
+    "source": "Paper T2 Q4.1",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "Same Jio block. Group 1 uses 32 × 512, Group 2 64 × 256, Group 3 128 × 128. How many addresses remain?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "0"
+      },
+      {
+        "letter": "b",
+        "text": "8192"
+      },
+      {
+        "letter": "c",
+        "text": "16384"
+      },
+      {
+        "letter": "d",
+        "text": "32768"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Each group uses 16384. Total 49152. 65536 − 49152 = **16384** left.",
+    "source": "Paper T2 Q4.1",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "ISP has 190.100.0.0/16. Group 1: 64 × 256, Group 2: 128 × 128, Group 3: 128 × 64. How many addresses remain?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "16384"
+      },
+      {
+        "letter": "b",
+        "text": "24576"
+      },
+      {
+        "letter": "c",
+        "text": "32768"
+      },
+      {
+        "letter": "d",
+        "text": "40960"
+      }
+    ],
+    "answer": "b",
+    "explanation": "16384 + 16384 + 8192 = 40960 used. 65536 − 40960 = **24576**.",
+    "source": "PB Q253",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "Network 11.0.0.0/8 needs a subnet with 3998 hosts. Which prefix?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "/19"
+      },
+      {
+        "letter": "b",
+        "text": "/20"
+      },
+      {
+        "letter": "c",
+        "text": "/21"
+      },
+      {
+        "letter": "d",
+        "text": "/22"
+      }
+    ],
+    "answer": "b",
+    "explanation": "2¹² − 2 = 4094 ≥ 3998 → 12 host bits → **/20**.",
+    "source": "PB Q255",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "Same network: the 1589-host subnet. How many usable addresses are wasted?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "457"
+      },
+      {
+        "letter": "b",
+        "text": "459"
+      },
+      {
+        "letter": "c",
+        "text": "96"
+      },
+      {
+        "letter": "d",
+        "text": "65"
+      }
+    ],
+    "answer": "a",
+    "explanation": "1589 → 2¹¹ − 2 = 2046 usable. Wasted = 2046 − 1589 = **457**.",
+    "source": "PB Q255",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "198.16.0.0 onward: D needs 8000 addresses and is given the first block (class method, largest first). What is D's block?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "198.16.0.0/19 to 198.16.31.255"
+      },
+      {
+        "letter": "b",
+        "text": "198.16.0.0/20 to 198.16.15.255"
+      },
+      {
+        "letter": "c",
+        "text": "198.16.0.0/18 to 198.16.63.255"
+      },
+      {
+        "letter": "d",
+        "text": "198.16.0.0/21 to 198.16.7.255"
+      }
+    ],
+    "answer": "a",
+    "explanation": "8000 → 8192 = 2¹³ → /19 → 32 values of the 3rd octet → **198.16.0.0 – 198.16.31.255**.",
+    "source": "PB Q249",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "193.1.2.0 with mask 255.255.255.128. How many usable hosts are in each of the two subnets?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "128"
+      },
+      {
+        "letter": "b",
+        "text": "126"
+      },
+      {
+        "letter": "c",
+        "text": "62"
+      },
+      {
+        "letter": "d",
+        "text": "254"
+      }
+    ],
+    "answer": "b",
+    "explanation": "/25 → 7 host bits → 2⁷ − 2 = **126**.",
+    "source": "PB Q252",
+    "bookKeyCorrected": false
+  }
+]

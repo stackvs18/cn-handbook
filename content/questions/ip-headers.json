@@ -1,0 +1,236 @@
+[
+  {
+    "number": 1,
+    "question": "One of the header fields in an IP datagram is the Time to Live (TTL) field. Which statement best explains the need for this field?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "It can be used to prioritize packets"
+      },
+      {
+        "letter": "b",
+        "text": "It can be used to reduce delays"
+      },
+      {
+        "letter": "c",
+        "text": "It can be used to optimize throughput"
+      },
+      {
+        "letter": "d",
+        "text": "It can be used to prevent packet looping"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Every router subtracts 1 from TTL. At 0 the packet is dropped, so a packet stuck in a routing loop cannot circle forever.",
+    "source": "PB Q221",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "Which one of the following fields of an IP header is **NOT** modified by a typical IP router?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Checksum"
+      },
+      {
+        "letter": "b",
+        "text": "Source Address"
+      },
+      {
+        "letter": "c",
+        "text": "TTL"
+      },
+      {
+        "letter": "d",
+        "text": "Length"
+      }
+    ],
+    "answer": "b",
+    "explanation": "A router decreases TTL (so it must recompute the checksum) and changes length when it fragments. The **source address** stays the same (unless NAT is involved).",
+    "source": "PB Q222",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "An IPv4 packet has arrived with the first 8 bits as `01000010`. Which of the following is correct?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "The number of hops this packet can travel is 2"
+      },
+      {
+        "letter": "b",
+        "text": "The total number of bytes in header is 16 bytes"
+      },
+      {
+        "letter": "c",
+        "text": "The upper layer protocol is ICMP"
+      },
+      {
+        "letter": "d",
+        "text": "The receiver rejects the packet"
+      }
+    ],
+    "answer": "d",
+    "explanation": "First 4 bits `0100` = version 4. Next 4 bits `0010` = HLEN 2 → header = 2 × 4 = **8 bytes**. The minimum header is 20 bytes (HLEN 5), so the packet is **rejected**.",
+    "source": "PB Q223",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "In an IPv4 packet, the value of HLEN is `1000` in binary. How many bytes of options are being carried?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "4 bytes"
+      },
+      {
+        "letter": "b",
+        "text": "12 bytes"
+      },
+      {
+        "letter": "c",
+        "text": "16 bytes"
+      },
+      {
+        "letter": "d",
+        "text": "8 bytes"
+      }
+    ],
+    "answer": "b",
+    "explanation": "HLEN 1000 = 8 → header = 8 × 4 = 32 bytes. Options = 32 − 20 = **12 bytes**.",
+    "source": "PB Q224",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "In an IPv4 datagram, M bit = 0, HLEN = 10, total length = 400 and fragment offset = 300. The position of the datagram and the sequence numbers of the first and last bytes of the payload are",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Last fragment, 2400 and 2789"
+      },
+      {
+        "letter": "b",
+        "text": "First fragment, 2400 and 2759"
+      },
+      {
+        "letter": "c",
+        "text": "Last fragment, 2400 and 2759"
+      },
+      {
+        "letter": "d",
+        "text": "Middle fragment, 300 and 689"
+      }
+    ],
+    "answer": "c",
+    "explanation": "M = 0 → **last** fragment. Header = 10 × 4 = 40 → data = 400 − 40 = 360. First byte = 300 × 8 = **2400**. Last byte = 2400 + 360 − 1 = **2759**.",
+    "source": "PB Q225",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "Which of the following fields in an IPv4 datagram is **not** related to fragmentation?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Type of service"
+      },
+      {
+        "letter": "b",
+        "text": "Fragment offset"
+      },
+      {
+        "letter": "c",
+        "text": "Flags"
+      },
+      {
+        "letter": "d",
+        "text": "Identification"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Fragmentation uses **Identification**, **Flags** (DF, MF) and **Fragment offset**. Type of service is about priority.",
+    "source": "PB Q226",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "Datagrams are limited to 1,500 bytes (including header). With a 20-byte IP header and a 20-byte TCP header, how many datagrams are needed to send a 4 million byte MP3?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "2667"
+      },
+      {
+        "letter": "b",
+        "text": "2700"
+      },
+      {
+        "letter": "c",
+        "text": "2740"
+      },
+      {
+        "letter": "d",
+        "text": "2800"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Data per datagram = 1500 − 20 − 20 = 1460. 4,000,000 / 1460 = 2739.7 → round up → **2740**. The same sum came in the T2 paper (Q4.8).",
+    "source": "PB Q237",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "The **IPv6** base header is always how long?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "20 bytes"
+      },
+      {
+        "letter": "b",
+        "text": "32 bytes"
+      },
+      {
+        "letter": "c",
+        "text": "40 bytes"
+      },
+      {
+        "letter": "d",
+        "text": "60 bytes"
+      }
+    ],
+    "answer": "c",
+    "explanation": "IPv6 has a fixed **40-byte** base header. Optional data goes in extension headers. IPv4 is 20–60 bytes.",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "IPv6 uses 16-byte addresses. If a block of 1 million addresses is allocated every picosecond, roughly how long will the addresses last?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "About 10¹⁰ years"
+      },
+      {
+        "letter": "b",
+        "text": "About 10¹³ years"
+      },
+      {
+        "letter": "c",
+        "text": "About 10²⁰ years"
+      },
+      {
+        "letter": "d",
+        "text": "About 10³² years"
+      }
+    ],
+    "answer": "b",
+    "explanation": "2¹²⁸ ≈ 3.4 × 10³⁸ addresses. At 10⁶ per 10⁻¹² s = 10¹⁸ per second → 3.4 × 10²⁰ s ≈ **1.08 × 10¹³ years**.",
+    "source": "PB Q250",
+    "bookKeyCorrected": false
+  }
+]

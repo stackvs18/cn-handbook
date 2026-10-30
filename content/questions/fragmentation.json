@@ -1,0 +1,262 @@
+[
+  {
+    "number": 1,
+    "question": "An IP datagram of 1000 bytes (20-byte header) is forwarded on a link with MTU 100 bytes. How many fragments?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "10"
+      },
+      {
+        "letter": "b",
+        "text": "12"
+      },
+      {
+        "letter": "c",
+        "text": "13"
+      },
+      {
+        "letter": "d",
+        "text": "14"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Data = 980. Each fragment carries 100 − 20 = 80 (a multiple of 8 ✓). 980 / 80 = 12.25 → **13**.",
+    "source": "PB Q239",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "A 2400-byte datagram (ID 422) goes onto a link with MTU 700. What is the offset of the **last** fragment?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "170"
+      },
+      {
+        "letter": "b",
+        "text": "255"
+      },
+      {
+        "letter": "c",
+        "text": "340"
+      },
+      {
+        "letter": "d",
+        "text": "360"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Data 2380, 680 per fragment → 4 fragments: 680, 680, 680, 340. Offsets 0, 85, 170, **255**.",
+    "source": "PB Q240",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "MTU 200, packet of 520 bytes with a 20-byte header. What is the data in each full fragment?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "180 bytes"
+      },
+      {
+        "letter": "b",
+        "text": "176 bytes"
+      },
+      {
+        "letter": "c",
+        "text": "200 bytes"
+      },
+      {
+        "letter": "d",
+        "text": "160 bytes"
+      }
+    ],
+    "answer": "b",
+    "explanation": "MTU − 20 = 180, but data must be a **multiple of 8** → 176. Fragments: 176, 176, 148 (TL 196, 196, 168; offsets 0, 22, 44).",
+    "source": "PB Q241",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "A 4500-byte packet (20-byte header) goes onto a link with MTU 600. What is the fragment offset of the third fragment?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "72"
+      },
+      {
+        "letter": "b",
+        "text": "116"
+      },
+      {
+        "letter": "c",
+        "text": "144"
+      },
+      {
+        "letter": "d",
+        "text": "174"
+      }
+    ],
+    "answer": "c",
+    "explanation": "600 − 20 = 580 → round down to a multiple of 8 = 576. Offsets go 0, 72, **144**.",
+    "source": "PB Q242",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "A 3200-byte datagram (ID 512), MTU 900. What is the total length of the last fragment?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "540"
+      },
+      {
+        "letter": "b",
+        "text": "560"
+      },
+      {
+        "letter": "c",
+        "text": "880"
+      },
+      {
+        "letter": "d",
+        "text": "900"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Data 3180, 880 per fragment → 880, 880, 880, 540. Last TL = 540 + 20 = **560** (offset 330, MF 0).",
+    "source": "PB Q243",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "8880 bytes of UDP data (8-byte UDP header, 20-byte IP header) are sent over Ethernet with MTU 1500. How many fragments, and what is the last offset?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "6 fragments, offset 925"
+      },
+      {
+        "letter": "b",
+        "text": "7 fragments, offset 1110"
+      },
+      {
+        "letter": "c",
+        "text": "7 fragments, offset 1295"
+      },
+      {
+        "letter": "d",
+        "text": "6 fragments, offset 1110"
+      }
+    ],
+    "answer": "b",
+    "explanation": "IP data = 8880 + 8 = 8888. 1480 per fragment → 8888 / 1480 = 6.005 → **7**. Last offset = 6 × 1480 / 8 = **1110**.",
+    "source": "PB Q245",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "1000-byte TCP message (20-byte TCP header included), IP header 20. Link R1–R2: max frame 700 incl. 10-byte header. For the last packet on R1–R2, what are the total length and offset?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "356 and 83"
+      },
+      {
+        "letter": "b",
+        "text": "336 and 83"
+      },
+      {
+        "letter": "c",
+        "text": "356 and 84"
+      },
+      {
+        "letter": "d",
+        "text": "684 and 0"
+      }
+    ],
+    "answer": "a",
+    "explanation": "MTU = 690 → data 670 → 664 (multiple of 8). 1000 = 664 + 336. Last fragment TL = 336 + 20 = **356**, offset = 664 / 8 = **83**, MF 0, DF 0.",
+    "source": "PB Q244",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "Paper version: 1200-byte TCP segment, IP header 20. A–R1 frame 1500 (14-byte header), R1–R2 frame 800 (10-byte header). Last fragment on R1–R2: total length and offset?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "452 and 96"
+      },
+      {
+        "letter": "b",
+        "text": "432 and 96"
+      },
+      {
+        "letter": "c",
+        "text": "452 and 97"
+      },
+      {
+        "letter": "d",
+        "text": "790 and 0"
+      }
+    ],
+    "answer": "a",
+    "explanation": "A–R1 MTU 1486 ≥ 1220, so no split. R1–R2 MTU 790 → data 770 → 768. 1200 = 768 + 432. Last: TL **452**, offset 768/8 = **96**, MF 0, DF 0.",
+    "source": "Paper T2 Q4.3",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "IP packets carry at most 500 bytes of data. TCP sends a 1000-byte data segment (20-byte TCP header). How many IP packets and what sizes?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "2 packets: 520, 520"
+      },
+      {
+        "letter": "b",
+        "text": "3 packets: 516, 516, 48"
+      },
+      {
+        "letter": "c",
+        "text": "3 packets: 520, 520, 40"
+      },
+      {
+        "letter": "d",
+        "text": "2 packets: 1020, 20"
+      }
+    ],
+    "answer": "b",
+    "explanation": "TCP segment = 1020 bytes. Data per fragment must be a multiple of 8 → 496. 1020 = 496 + 496 + 28 → sizes **516, 516, 48** (this matches the class notes).",
+    "source": "PB Q238",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "An 1800-byte datagram crosses Ethernet (MTU 1500) then a WAN (MTU 576). What are the offsets of the fragments that arrive?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "0, 69, 138, 185"
+      },
+      {
+        "letter": "b",
+        "text": "0, 72, 144, 185"
+      },
+      {
+        "letter": "c",
+        "text": "0, 185"
+      },
+      {
+        "letter": "d",
+        "text": "0, 69, 138, 207"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Ethernet: 1480 + 300 (offsets 0, 185). WAN: 1480 → 552 + 552 + 376 (offsets 0, 69, 138). The 300-byte fragment passes unchanged. Final: **0, 69, 138, 185**.",
+    "source": "PB Q261",
+    "bookKeyCorrected": false
+  }
+]

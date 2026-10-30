@@ -1,0 +1,340 @@
+[
+  {
+    "number": 1,
+    "question": "cwnd is 32 KB when a timeout occurs. RTT = 100 ms and MSS = 2 KB. The time (in ms) to get back to a 32 KB window is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1100 to 1300"
+      },
+      {
+        "letter": "b",
+        "text": "800 to 1000"
+      },
+      {
+        "letter": "c",
+        "text": "1400 to 1600"
+      },
+      {
+        "letter": "d",
+        "text": "None of the mentioned"
+      }
+    ],
+    "answer": "a",
+    "explanation": "ssthresh = 16 KB, cwnd restarts at 2 KB. Slow start 2→4→8→16 = 3 RTT. Congestion avoidance 16→32 in steps of 2 = 8 RTT. 11 × 100 = **1100 ms**.",
+    "source": "PB Q323",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 2,
+    "question": "cwnd = 4 KB, advertised window = 6 KB, LastByteSent = 10240, LastByteAcked = 8192. The current window size at the sender is",
+    "options": [
+      {
+        "letter": "a",
+        "text": "2048 bytes"
+      },
+      {
+        "letter": "b",
+        "text": "4096 bytes"
+      },
+      {
+        "letter": "c",
+        "text": "6144 bytes"
+      },
+      {
+        "letter": "d",
+        "text": "None of the mentioned"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Window = min(cwnd, rwnd) = min(4 KB, 6 KB) = **4096 bytes**. (2048 bytes are in flight, so 2048 more can be sent.)",
+    "source": "PB Q324",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 3,
+    "question": "Bandwidth = 1,048,560 bits/s. Let a = RTT (ms) beyond which the window scale option is needed, b = maximum window with the scale option. Then a and b are",
+    "options": [
+      {
+        "letter": "a",
+        "text": "63 ms, 65535 × 2¹⁴"
+      },
+      {
+        "letter": "b",
+        "text": "63 ms, 65535 × 2¹⁶"
+      },
+      {
+        "letter": "c",
+        "text": "500 ms, 65535 × 2¹⁴"
+      },
+      {
+        "letter": "d",
+        "text": "None of the mentioned"
+      }
+    ],
+    "answer": "c",
+    "explanation": "The 16-bit window holds 65535 bytes = 524,280 bits. 524280 / 1048560 = 0.5 s = **500 ms**. The scale shift is at most 14 → **65535 × 2¹⁴**.",
+    "source": "PB Q325",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 4,
+    "question": "Slow start statements: (i) cwnd increases by 2 MSS on every ACK (ii) cwnd doubles on every ACK (iii) cwnd increases by 1 MSS every RTT (iv) cwnd approximately doubles every RTT. Which is correct?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Only (ii) and (iii) are true"
+      },
+      {
+        "letter": "b",
+        "text": "Only (i) and (iii) are true"
+      },
+      {
+        "letter": "c",
+        "text": "Only (iv) is true"
+      },
+      {
+        "letter": "d",
+        "text": "Only (i) and (iv) are true"
+      }
+    ],
+    "answer": "c",
+    "explanation": "In slow start cwnd grows by 1 MSS per ACK, which makes it **double every RTT**. Only (iv) says that.",
+    "source": "PB Q352",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 5,
+    "question": "What is the receiver window (rwnd) if host B has a 7000-byte buffer with 1000 bytes received but unprocessed?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1000"
+      },
+      {
+        "letter": "b",
+        "text": "7000"
+      },
+      {
+        "letter": "c",
+        "text": "6000"
+      },
+      {
+        "letter": "d",
+        "text": "8000"
+      }
+    ],
+    "answer": "c",
+    "explanation": "rwnd = 7000 − 1000 = **6000**.",
+    "source": "PB Q353",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 6,
+    "question": "What is the window size for host A if rwnd = 3000 bytes and cwnd = 5500 bytes?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1000"
+      },
+      {
+        "letter": "b",
+        "text": "7000"
+      },
+      {
+        "letter": "c",
+        "text": "5500"
+      },
+      {
+        "letter": "d",
+        "text": "3000"
+      }
+    ],
+    "answer": "d",
+    "explanation": "min(3000, 5500) = **3000**.",
+    "source": "PB Q354",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 7,
+    "question": "Buffer 6000 bytes, 1000 bytes received and unprocessed. rwnd?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "7000"
+      },
+      {
+        "letter": "b",
+        "text": "6000"
+      },
+      {
+        "letter": "c",
+        "text": "5000"
+      },
+      {
+        "letter": "d",
+        "text": "1000"
+      }
+    ],
+    "answer": "c",
+    "explanation": "6000 − 1000 = **5000**.",
+    "source": "PB Q365",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 8,
+    "question": "Buffer 5000 bytes, 1000 bytes unprocessed. rwnd?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "6000"
+      },
+      {
+        "letter": "b",
+        "text": "5000"
+      },
+      {
+        "letter": "c",
+        "text": "4000"
+      },
+      {
+        "letter": "d",
+        "text": "1000"
+      }
+    ],
+    "answer": "c",
+    "explanation": "5000 − 1000 = **4000**.",
+    "source": "PB Q366",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 9,
+    "question": "rwnd = 3000, cwnd = 4500. Window size?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "1500"
+      },
+      {
+        "letter": "b",
+        "text": "3000"
+      },
+      {
+        "letter": "c",
+        "text": "4500"
+      },
+      {
+        "letter": "d",
+        "text": "7500"
+      }
+    ],
+    "answer": "b",
+    "explanation": "min(3000, 4500) = **3000**.",
+    "source": "PB Q367",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 10,
+    "question": "rwnd = 4000, cwnd = 4500. Window size?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "500"
+      },
+      {
+        "letter": "b",
+        "text": "4000"
+      },
+      {
+        "letter": "c",
+        "text": "4500"
+      },
+      {
+        "letter": "d",
+        "text": "8500"
+      }
+    ],
+    "answer": "b",
+    "explanation": "min(4000, 4500) = **4000**.",
+    "source": "PB Q368",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 11,
+    "question": "TCP Reno: cwnd reaches 32 MSS when a **triple duplicate ACK** arrives. After fast retransmit / fast recovery finishes, cwnd and ssthresh are",
+    "options": [
+      {
+        "letter": "a",
+        "text": "cwnd 1 MSS, ssthresh 16 MSS"
+      },
+      {
+        "letter": "b",
+        "text": "cwnd 16 MSS, ssthresh 16 MSS"
+      },
+      {
+        "letter": "c",
+        "text": "cwnd 19 MSS, ssthresh 32 MSS"
+      },
+      {
+        "letter": "d",
+        "text": "cwnd 32 MSS, ssthresh 16 MSS"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Reno on 3 dup ACKs: ssthresh = 32/2 = **16**, cwnd = ssthresh + 3 = 19 during recovery, then **cwnd = ssthresh = 16** when recovery ends. (A timeout would set cwnd = 1 MSS instead.)",
+    "source": "Paper T2 Q4.7",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 12,
+    "question": "On a **timeout** (not triple duplicate ACK), TCP sets",
+    "options": [
+      {
+        "letter": "a",
+        "text": "ssthresh = cwnd/2, cwnd = 1 MSS"
+      },
+      {
+        "letter": "b",
+        "text": "ssthresh = cwnd, cwnd = cwnd/2"
+      },
+      {
+        "letter": "c",
+        "text": "cwnd = ssthresh + 3"
+      },
+      {
+        "letter": "d",
+        "text": "nothing changes"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Timeout is the serious case: ssthresh = cwnd/2 and cwnd goes back to **1 MSS** (slow start again).",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  },
+  {
+    "number": 13,
+    "question": "Congestion control methods: which one is **closed loop** (removes congestion after it happens)?",
+    "options": [
+      {
+        "letter": "a",
+        "text": "Retransmission policy"
+      },
+      {
+        "letter": "b",
+        "text": "Window policy"
+      },
+      {
+        "letter": "c",
+        "text": "Choke packet"
+      },
+      {
+        "letter": "d",
+        "text": "Admission policy"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Open loop (prevention): retransmission, window, acknowledgement, discarding, admission policy. Closed loop (removal): **back pressure, choke packet**, implicit and explicit signalling.",
+    "source": "Sum drill",
+    "bookKeyCorrected": false
+  }
+]
